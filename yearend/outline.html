@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Song+Myung&display=swap" rel="stylesheet"> 
+    
+    <link rel="stylesheet" href="../style.css">
+    <title>연말정산 개요</title>
+    <style>
+        table {
+            margin: 0 auto;
+            table-layout: fixed;
+            width: 95%;
+            /* border: 1px solid blue; */
+            border-collapse: collapse; /*separate;*/
+            /* border-spacing: 2%; */
+            
+        }
+
+        td {
+            padding: 0.3em 0;
+        } 
+        
+        table .underline {
+            border-bottom: 1px solid blue;
+        }
+
+        table .lastline {
+            border-bottom: 2px double blue;
+        }
+        
+        table tr td:nth-child(1) {
+            text-align: right;
+            width: 20px;
+            
+        }
+        table tr td:nth-child(2) {
+            text-align: center;
+            width: 180px;
+        }
+        table tr td:nth-child(3) {
+            font-size: 0.8em;
+            /* width: 200px; */
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar"></div>
+    <div class="container">
+        <div class="menubar">
+            <div class="menu" id="menulist"><img src="../images/menu.png" alt="menulist"></div>
+            <div class="menu"><a href="../index.html">HOME</a></div>
+            <div class="menu active"><a href="outline.html">연말정산</a></div>
+            <div class="menu"><a href="">소득세</a></div>
+            <div class="menu"><a href="">법인세</a></div>   
+        </div>
+        
+        <div class="content-container">
+            <div class="submenu-container">
+                <ul class="submenu">
+                    <li><a href="../index.html">HOME</a></li>
+                    <li><a href="outline.html">연말정산 개요</a></li>
+                    <li><a href="outline.html#nts_yearend_deduction">연말정산간소화 서비스</a></li>
+                    <li><a href="outline.html#wagetax-structure">근로소득세 계산 구조</a></li>
+                    <li><a href="income_inform1.html">비과세급여</a></li>
+                    <li><a href="#">근로소득공제</a></li>
+                    <li><a href="#">인적공제</a></li>
+                    <li><a href="#">연금보험료공제</a></li>
+                    <li><a href="#">특별소득공제</a></li>
+                    <li><a href="#">세액공제감면</a></li>
+                    <li><a href="#">월세액공제</a></li>
+    
+                </ul>
+            </div>
+            <div class="content">
+                <div class="content-part">
+                    <h1 class="maintitle">연말정산 개요</h1>
+                </div>
+                <div class="content-part">
+                    <h2 class="subtitle">연말정산이란?</h2>
+                    <p class="explain">1년 동안 매달 원천징수된 세액을 연초에 지난해 1년간의 소득에 따라 정확하게 세액을 산정한 후, 1년간 원천징수한 세액과 비교하여 추가납부 또는 환급액을 산정하는 절차로서, </p>
+                    <p class="explain">근로소득자의 납세편의를 도모하기 위해 근로자가 직접 소득세 확정신고 대신 원천징수의무자(회사)에게 연말정산 공제서류를 회사에 제출하여 회사에서  근로소득세액을 정산하는 제도입니다.</p>
+                </div>
+
+                <div class="content-part">
+                    <h2 class="subtitle">연말정산 필요성</h2>
+                    <p>매달 원천징수되는 세액은 연중에 연간 근로소득을 정확히 알수 없는 상태에서 간이세액표에 의해 징수되는 것으로 원천징수된 세액은 정확하게 계산된 세액이라고 할 수 없어,</p>
+                    <p> 부양가족 공제 및 소득·세액공제액등을 반영하여 세액정산하여야 합니다.</p>
+                </div>
+                <div class="content-part">
+                    <h2 class="subtitle">연말정산 시기 및 방법</h2>
+                    <p class="explain">원천징수의무자(회사)는 2월분의 급여을 지급하는 때에 그 전년도 근로소득을 대상으로 연말정산을 실시하며,</p> 
+                    <p>통상적으로 1월말에 국세청 홈택스에서 조회한 연말정산간소화자료, 그리고 연말정산간소화자료에 반영이 안된 수동으로 수집한 영수증을 회사에 제출하게 됩니다.</p>
+                    <p>중도퇴사자의 경우는 회사에서 퇴사하는 달에 기본적인 공제만 적용하여 세액정산을 하므로, 본인이 다음해 5월달에 종합소득세를 신고하여 누락된 소득공제 세액공제를 신고하거나, 재취업한 회사(최종근무지)에 중도퇴사분의 근로소득원천징수영수증을 제출하여 합산정산하여야 합니다.</p>
+                    <p>직장을 옮겨서 근무지가 여러 곳인 경우, 반드시 다수 근무지 근로소득을 모두 합산하여 연말정산(또는 5월에 종합소득세신고)하여야 하며, 이런 경우 환급세액 보다는 납부세액이 발생하는 경우가 많습니다.</p>
+                </div>
+                <div class="content-part">
+                    <a name="nts_yearend_deduction"></a>
+                    <h2 class="subtitle">연말정산간소화 조회방법</h2>
+                    <p class="explain">소득공제 및 세액공제는 <b>홈택스 연말정산간소화</b>서비스를 이용하여 파일로 다운로드받거나 출력할 수 있으며, 연말정산간소화 서비스 접속은 홈택스(www.hometax.go.kr) ➜ 조회/발급 ➜ 연말정산간소화 클릭하면 됩니다.</p>
+                    <div class="blacktitle">                        
+                        <p>연말정산간소화 서비스 화면</p>
+                        <div class="deduct-window"></div>
+                    </div>
+                    <p><b>개통시기</b> : 연말정산 간소화 서비스 개통시기는 1월 15일경이며, 직전년도 이전년도 연말정산소득공제 자료는 홈택스로그인하면 언제든지 조회가능합니다.</p>
+                    <p><b>주의사항</b> : 일부 영수증 발급기관이 국세청에 제출하지 않은 자료가 있는 경우가 있는데, 이 경우에는 연말정산 간소화 서비스에서 조회되지 않으며, 해당 기관에서 직접 증명서류 발급요청을하여 공제증빙영수증을 챙겨야합니다.</p>
+                </div>
+
+                <div class="content-part">
+                    <a name="wagetax-structure"></a>
+                    <h2 class="subtitle">근로소득 세액계산 구조</h2>
+                    <table>
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td><b>총급여액</b></td>
+                                <td class="cal-detail">(연봉, 급여, 상여, 수당, 인정상여 등)</td>
+                            </tr>
+                            <tr>
+                                <td>(-)</td>
+                                <td class="underline"><a href="income_inform1.html">비과세급여</a></td>
+                                <td ></td>
+                            </tr>
+                            
+                            <tr>
+                                <td></td>
+                                <td>과세대상급여</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>(-)</td>
+                                <td class="underline">근로소득공제</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>근로소득금액</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>(-)</td>
+                                <td>인적공제</td>
+                                <td>(부양가족공제, 추가공제 등)</td>
+                            </tr>
+                            <tr>
+                                <td>(-)</td>
+                                <td>연금보험료공제</td>
+                                <td>(국민연금보험료 등 공적연금납부액)</td>
+                            </tr>
+                            <tr>
+                                <td>(-)</td>
+                                <td>특별소득공제</td>
+                                <td class="cal-detail">(건강보험료, 주택자금공제)</td>
+                            </tr>
+                            <tr>
+                                <td>(-)</td>
+                                <td class="underline">그외 소득공제</td>
+                                <td class="cal-detail">(신용카드사용공제, 주택마련저축 등)</td>
+                            </tr>
+                            
+                            <tr>
+                                <td></td>
+                                <td><b>과세표준</b></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>(x)</td>
+                                <td class="underline">세율</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><b>산출세액</b></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>(-)</td>
+                                <td>세액감면</td>
+                                <td class="cal-detail">(중소기업 취업자 소득세감면 등)</td>
+                            </tr>
+                            <tr>
+                                <td>(-)</td>
+                                <td>근로소득세액공제</td>
+                                <td class="cal-detail">(법에 따라 자동으로 계산됨)</td>
+                            </tr>
+                            <tr>
+                                <td>(-)</td>
+                                <td>자녀세액공제</td>
+                                <td class="cal-detail">(7세 이상 기본공제대상 자녀)</td>
+                            </tr>
+                            <tr>
+                                <td>(-)</td>
+                                <td>연금계좌세액공제</td>
+                                <td class="cal-detail">(연금저축, 퇴직연금)</td>
+                            </tr>
+                            <tr>
+                                <td>(-)</td>
+                                <td>특별세액공제</td>
+                                <td class="cal-detail">(보장성보험, 의료비, 교육비, 기부금)</td>
+                            </tr>
+                            <tr>
+                                <td>(-)</td>
+                                <td class="underline">월세액공제 등</td>
+                                <td></td>
+                            </tr>
+                            
+                            <tr>
+                                <td></td>
+                                <td><b>결정세액</b></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>(-)</td>
+                                <td class="underline">기납부세액</td>
+                                <td></td>
+                            </tr>
+                           
+                            <tr>
+                                <td></td>
+                                <td class="lastline"><b>징수(환급)세액</b></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="last-part"></div>
+            </div>
+            <div class="footer">footer</div>
+        </div>
+    </div>
+    <script src="../index.js"></script>
+</body>
+</html>
