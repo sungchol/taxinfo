@@ -23,6 +23,7 @@
         }
 
         td, th {
+            text-align: center;
             padding: 0.3em 0;
             font-size: 0.8em;
             border: 1px solid blue;
@@ -37,15 +38,32 @@
         }
         
         table tr td:nth-child(1) {
-            text-align: center;
+            /* text-align: center; */
+            padding-left: 5px;
             width: 150px;
             
         }
         table tr td:nth-child(2) {
             text-align: left;
+            padding-left: 5px;
             
         }
+
+        .basic-deduction td:nth-child(1) {
+            /* text-align: center; */
+            width: 66px;
+        }
         
+        .basic-deduction tbody td:nth-child(2) {
+            text-align: left;
+            width: 1fr;
+        }
+        .add-deduction td:nth-child(1) {
+            /* text-align: center; */
+            width: 90px;
+        }
+        
+
     </style>
 </head>
 <body>
@@ -76,153 +94,305 @@
             </div>
             <div class="content">
                 
-                <div class="content-part">
+                <article class="content-part">
                     <a name="notax"></a>
                     <h2 class="subtitle">비과세 급여</h2>
                     <p class="explain"> 근로자에게 지급하는 숙직비, 월20만원이내의 자기차량운전보조금 등 실비변상적인 급여, 국외근로소득, 생산직근로자의 야간수당등 소득세법에 비과세소득으로 열거된 소득은 비과세하고 있습니다. </p>
-
-                    <div class="blacktitle">                        
-                        <p>비과세 급여 요약</p>
-                    </div>
-                    <table>
-                        <thead>
-                           <tr>
-                               <th>구분</th>
-                               <th>비과세 급여요약</th>
-                           </tr> 
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>실비변상적급여</td>
-                                <td>
-                                    <ul>
-                                        <li class="list disc">일숙직비</li>
-                                        <li class="list disc">월20만원 이내 자기차량운전보조금</li>
-                                        <li class="list disc">제복, 제모, 제화</li>
-                                        <li class="list disc">특수분야 종사자 수당, 천재지변 수당</li>
-                                        <li class="list disc">학교의 교원이 받는 연구보조비 또는 연구활동비 중 월 20만원이내 금액</li>
-                                        <li class="list disc">언론사에 근무하는 기자가 취재활동과 관련하여 받는 취재수당중 월20만원 이내금액</li>
-                                        <li class="list disc">근로자가 벽지에 근무함으로 인하여 받는 월 20만원 이내의 벽지수당</li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>비과세 식사대</td>
-                                <td>
-                                    <ul>
-                                        <li class="list disc">현물 식사(고용주가 무상으로 제공하는 음식물)</li>
-                                        <li class="list disc">식사 등 음식물을 제공받지 아니하는 근무자가 받는 월 10만원 이하 식사대</li>
-                                    </ul>
-                                </td>
-                            </tr>  
-                            <tr>
-                                <td>국외근로소득</td>
-                                <td>
-                                    <ul>
-                                        <li class="list disc">국외 근로소득 중 월100만원 이내 금액</li>
-                                        <li class="list disc">국외 항행선박 또는 국외 건설현장 근로소득 중 월300만원 이내 금액</li>
-                                    </ul>
-                                </td>
-                            </tr> 
-                            <tr>
-                                <td>야간근로수당</td>
-                                <td>
-                                    <ul>
-                                        <li class="list disc">생산직근로자로서 월정액급여 210만원 이하로서 직전 과세기간 총급여액이 3천만원이하인 근로자가 연장근로 야간근로 휴일근로를 하여 추가로 받는 급여 중 연240만원 이내 금액</li>
-                                        
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>벤처기업 StockOption 이익</td>
-                                <td>
-                                    <ul>
-                                        <li class="list disc">벤처기업 임직원이 벤처기업으로부터 2024년 12월 31일이전에 부여받은 주식매수선택권을 행사함으로써 얻은 이익(행사당시 시가와 실제 매수가액과의 차액) 중 연간 3천만원 이내금액 </li>
-                                        
-                                    </ul>
-                                </td>
-                            </tr> 
-                            <tr>
-                                <td>직무발명 보상금</td>
-                                <td>
-                                    <ul>
-                                        <li class="list disc">발명진흥법 제2조 제2호에 따른 종업원이 사용자로 부터 받는 보상금중 연500만원 이내금액 </li>
-                                        <li class="list disc">대학의 교직원 또는 대학과 고용관계가 있는 학생이 소속 대학에 설치된 산학협력단으로 부터 받는 보상금중 연500만원 이내금액 </li>
-                                    </ul>
-                                </td>
-                            </tr> 
-                            <tr>
-                                <td>자녀보육수당 등<BR> 기타 비과세</td>
-                                <td>
-                                    <ul>
-                                        <li class="list disc">근로자 본인 또는 배우자의 출산이나 6세이하 자녀의 보육과 관련하여 받는 급여로서 월10만원 이내 금액 </li>
-                                        <li class="list disc">｢고용보험법｣에 따른 실업급여⋅육아휴직 급여⋅육아기 근로시간 단축 급여, 출산전후휴가 급여</li>
-                                        <li class="list disc">  공무원⋅교직원이 받는 육아휴직수당 </li>
-                                        <li class="list disc">주주가 아닌 임원, 임원이 아닌 종업원 등이 받는 사택제공 이익 </li>
-                                        <li class="list disc">중소기업 종업원의 주택 구입⋅임차 자금 저리 대여 이익 </li>
-                                        <li class="list disc">단체순수보장성 보험 및 단체 환급부보장성 보험 중 70만 원 이하의 보험료 </li>
-                                        <li class="list disc">공무원이 국가 또는 지방자치단체로부터 공무 수행과 관련하여 받는 상금과 부상 중 연240만원 이내의 금액 </li>
-                                    </ul>
-                                </td>
-                            </tr> 
-                        </tbody>
-                    </table>
-                    <p class="explain">.0.</p>
-                </div>
-                <div class="content-part">
+                    <section>
+                        <div class="blacktitle">                        
+                            <p>비과세 급여 요약</p>
+                        </div>
+                        <table>
+                            <thead>
+                               <tr>
+                                   <th>구분</th>
+                                   <th>비과세 급여요약</th>
+                               </tr> 
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>실비변상적급여</td>
+                                    <td>
+                                        <ul>
+                                            <li class="list disc">일숙직비</li>
+                                            <li class="list disc">월20만원 이내 자기차량운전보조금</li>
+                                            <li class="list disc">제복, 제모, 제화</li>
+                                            <li class="list disc">특수분야 종사자 수당, 천재지변 수당</li>
+                                            <li class="list disc">학교의 교원이 받는 연구보조비 또는 연구활동비 중 월 20만원이내 금액</li>
+                                            <li class="list disc">언론사에 근무하는 기자가 취재활동과 관련하여 받는 취재수당중 월20만원 이내금액</li>
+                                            <li class="list disc">근로자가 벽지에 근무함으로 인하여 받는 월 20만원 이내의 벽지수당</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>비과세 식사대</td>
+                                    <td>
+                                        <ul>
+                                            <li class="list disc">현물 식사(고용주가 무상으로 제공하는 음식물)</li>
+                                            <li class="list disc">식사 등 음식물을 제공받지 아니하는 근무자가 받는 월 10만원 이하 식사대</li>
+                                        </ul>
+                                    </td>
+                                </tr>  
+                                <tr>
+                                    <td>국외근로소득</td>
+                                    <td>
+                                        <ul>
+                                            <li class="list disc">국외 근로소득 중 월100만원 이내 금액</li>
+                                            <li class="list disc">국외 항행선박 또는 국외 건설현장 근로소득 중 월300만원 이내 금액</li>
+                                        </ul>
+                                    </td>
+                                </tr> 
+                                <tr>
+                                    <td>야간근로수당</td>
+                                    <td>
+                                        <ul>
+                                            <li class="list disc">생산직근로자로서 월정액급여 210만원 이하로서 직전 과세기간 총급여액이 3천만원이하인 근로자가 연장근로 야간근로 휴일근로를 하여 추가로 받는 급여 중 연240만원 이내 금액</li>
+                                            
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>벤처기업 StockOption 이익</td>
+                                    <td>
+                                        <ul>
+                                            <li class="list disc">벤처기업 임직원이 벤처기업으로부터 2024년 12월 31일이전에 부여받은 주식매수선택권을 행사함으로써 얻은 이익(행사당시 시가와 실제 매수가액과의 차액) 중 연간 3천만원 이내금액 </li>
+                                            
+                                        </ul>
+                                    </td>
+                                </tr> 
+                                <tr>
+                                    <td>직무발명 보상금</td>
+                                    <td>
+                                        <ul>
+                                            <li class="list disc">발명진흥법 제2조 제2호에 따른 종업원이 사용자로 부터 받는 보상금중 연500만원 이내금액 </li>
+                                            <li class="list disc">대학의 교직원 또는 대학과 고용관계가 있는 학생이 소속 대학에 설치된 산학협력단으로 부터 받는 보상금중 연500만원 이내금액 </li>
+                                        </ul>
+                                    </td>
+                                </tr> 
+                                <tr>
+                                    <td>자녀보육수당 등<BR> 기타 비과세</td>
+                                    <td>
+                                        <ul>
+                                            <li class="list disc">근로자 본인 또는 배우자의 출산이나 6세이하 자녀의 보육과 관련하여 받는 급여로서 월10만원 이내 금액 </li>
+                                            <li class="list disc">｢고용보험법｣에 따른 실업급여⋅육아휴직 급여⋅육아기 근로시간 단축 급여, 출산전후휴가 급여</li>
+                                            <li class="list disc">  공무원⋅교직원이 받는 육아휴직수당 </li>
+                                            <li class="list disc">주주가 아닌 임원, 임원이 아닌 종업원 등이 받는 사택제공 이익 </li>
+                                            <li class="list disc">중소기업 종업원의 주택 구입⋅임차 자금 저리 대여 이익 </li>
+                                            <li class="list disc">단체순수보장성 보험 및 단체 환급부보장성 보험 중 70만 원 이하의 보험료 </li>
+                                            <li class="list disc">공무원이 국가 또는 지방자치단체로부터 공무 수행과 관련하여 받는 상금과 부상 중 연240만원 이내의 금액 </li>
+                                        </ul>
+                                    </td>
+                                </tr> 
+                            </tbody>
+                        </table>
+                    </section>
+                    
+                </article>
+                <article class="content-part">
                     <a name="salary-deductions"></a>
                     <h2 class="subtitle">근로소득공제</h2>
                     <p class="explain"> 한해동안의 총급여액에서 법률로 정해진 근로소득공제(한도액 2천만원)를 차감하여 근로소득금액을 계산합니다. <br>근무기간이 1년 미만 이더라고 월할계산하지 아니하고, 근로소득자의 총급여액가 근로소득공제에 미달하는 경우에는 총급여액이 공제액이 됩니다.</p>
+                    <section>
+                        <div class="blacktitle">                    
+                            <p>근로소득공제금액 계산표</p>
+                        </div>
+                        <table>
+                            <thead>
+                               <tr>
+                                   <th >총급여액</th>
+                                   <th>근로소득공제 (공제한도 2천만원)</th>
+                               </tr> 
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>500만원 이하</td>
+                                    <td>총급여액 × 70%</td>
+                                </tr>
+                                <tr>
+                                    <td>500만원 초과 <br> 1500만원 이하</td>
+                                    <td>총급여액 × 40% + 100만원</td>
+                                </tr>
+                                <tr>
+                                    <td>1500만원 초과 <br> 4500만원 이하</td>
+                                    <td>총급여액 × 15% + 525만원</td>
+                                </tr>
+                                <tr>
+                                    <td>4500만원 초과 <br> 1억원 이하</td>
+                                    <td>총급여액 × 5% + 975만원</td>
+                                </tr>
+                                <tr>
+                                    <td>1억원 초과</td>
+                                    <td>총급여액 × 2% + 1275만원</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </article>
 
-                    <div class="blacktitle">                    
-                        <p>근로소득공제금액 계산표</p>
-                    </div>
-                    <table>
-                        <thead>
-                           <tr>
-                               <th >총급여액</th>
-                               <th>근로소득공제 (공제한도 2천만원)</th>
-                           </tr> 
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>500만원 이하</td>
-                                <td>총급여액 × 70%</td>
-                            </tr>
-                            <tr>
-                                <td>500만원 초과 <br> 1500만원 이하</td>
-                                <td>총급여액 × 40% + 100만원</td>
-                            </tr>
-                            <tr>
-                                <td>1500만원 초과 <br> 4500만원 이하</td>
-                                <td>총급여액 × 15% + 525만원</td>
-                            </tr>
-                            <tr>
-                                <td>4500만원 초과 <br> 1억원 이하</td>
-                                <td>총급여액 × 5% + 975만원</td>
-                            </tr>
-                            <tr>
-                                <td>1억원 초과</td>
-                                <td>총급여액 × 2% + 1275만원</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="content-part">
+                <article class="content-part">
                     <a name="deduction"></a>
                     <h2 class="subtitle">소득공제</h2>
                     <p class="explain">근로소득금액에서 인적공제(기본공제, 추가공제), 연금보험료공제, 특별소득공제, 신용카드등 사용금액공제 등 기타소득공제를 차감하여 과세표준을 계산합니다.</p>
+                    
+                    <section>
+                        <div class="blacktitle">                    
+                            <p>1. 인적공제 중 기본공제</p>
+                        </div>
 
-                    <div class="blacktitle">                    
-                        <p>1. 인적공제 중 기본공제 요건표</p>
-                    </div>
-                    <table>
-                    </table>
-                </div>
+                        <p class="explain"> 인적공제 중 기본공제는 아래표에 해당하는 사람(<strong>기본공제대상자</strong>)수에 <b>1명당 연150만원</b>을 곱한 금액을 공제하는 것을 말합니다.</p>
+                        
+                        <p class="explain"> 아래 연간소득금액은 총수입금액을 기준으로 금액을 산정하는 것이 아니라 총수입금액에서 필요경비를 제외한 소득금액을 말하는 것으로, 연간소득요건을 충족한다는 의미는 종합소득금액 · 퇴직소득금액 · 양도소득금액을 합한 금액이 연간 100만원이하이거나, 근로소득만 있는 경우에는 연간 총 500만원이하의 급여를 받은 경우를 뜻하는 것입니다.</p>
+                        <br>
+                        <table class="basic-deduction">
+                            <thead>
+                                <tr>
+                                    <th>구분</th>
+                                    <th>공제요건 설명</th>
+                                    <th>나이요건</th>
+                                    <th>소득요건</td>
+                                    <th>주민등록<br>동거가족</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>본인</td>
+                                    <td>기본공제대상</td>
+                                    <td>없음</td>
+                                    <td>없음</td>
+                                    <td> </td>
+                                </tr>
+                                <tr>
+                                    <td>배우자</td>
+                                    <td>연간소득금액 100만원 이하</td>
+                                    <td>없음</td>
+                                    <td>있음</td>
+                                    <td>×</td>
+                                </tr>
+                                <tr>
+                                    <td>직계존속</td>
+                                    <td>근로자와 생계를 같이하는 만60세 이상의 직계존속(배우자의 직계존속포함)으로 연간소득금액 100만원 이하</td>
+                                    <td>있음</td>
+                                    <td>있음</td>
+                                    <td>별거허용</td>
+                                </tr>
+                                <tr>
+                                    <td>직계비속</td>
+                                    <td>근로자와 생계를 같이하는 만20세 이하의 자녀, 동거입양자로 연간소득금액 100만원 이하</td>
+                                    <td>있음</td>
+                                    <td>있음</td>
+                                    <td>×</td>
+                                </tr>
+                                <tr>
+                                    <td>형제자매</td>
+                                    <td>근로자와 생계를 같이하는 만20세 이하 또는 만60세 이상의 형제자매로 연간소득금액 100만원 이하</td>
+                                    <td>있음</td>
+                                    <td>있음</td>
+                                    <td>○</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="jusuk">
+                            <ul>
+                                <li>장애인의 경우 나이 제한을 받지 아니하나 연간소득금액이 100만원(근로소득만 있는 자는 총급여 500만원)을 초과하는 경우 기본공제대상에 해당되지 않음</li>
+                                <li>근로자 및 배우자의 형제자매는 기본공제대상에 포함될 수 있으나, 형제자매의 배우자(제수, 형수 등)는 기본공제대상에 포함하지 아니함</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="blacktitle">                    
+                            <p>2. 인적공제 중 추가공제</p>
+                        </div>
+
+                        <p class="explain"> 기본공제대상자가 다음 어느하나에 해당하는 경우 해당 과세기간 종합소득금액에서 다음에서 정해진 금액을 추가로 공제합니다.</p>
+                        
+                        <br>
+                        <table class="add-deduction">
+                            <thead>
+                                <tr>
+                                    <th>구분</th>
+                                    <th>공제요건 설명</th>
+                                    <th>공제금액</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>경로자공제</td>
+                                    <td>기본공제대상자 만 70세이상</td>
+                                    <td>1명당 연 100만원 공제</td>
+
+                                </tr>
+                                <tr>
+                                    <td>장애인공제</td>
+                                    <td>기본공제대상자가 장애인에 해당</td>
+                                    <td>1명당 연 200만원 공제</td>
+                                </tr>
+                                <tr>
+                                    <td>부녀자공제</td>
+                                    <td>종합소득금액이 3천만원 이하인 거주자가 ① 배우자가 있는 여성이거나 ② 배우자가 없는 여성으로서 기본공제대상자인 부양가족이 있는 세대주인 경우</td>
+                                    <td>연 50만원</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </section>
+                    <section>
+                        <div class="blacktitle">                    
+                            <p>3. 연금보험료 공제</p>
+                        </div>
+    
+                        <p class="explain"> 종합소득이 있는 거주자가 국민연금, 공무원연금, 군인연금, 사립학교교직원연금 등 <strong>연금보험료 또는 기여금</strong>을 납입(부담)하는 경우 해당 과세기간 종합소득금액에서 <strong>해당 과세기간 납입한 연금보험료를 공제</strong>합니다. 단, 연금보험료 합계액이 종합소득금액을 초과하는 경우 초과분은 공제하지 않습니다.</p>
+                        
+                        <div class="jusuk">
+                            <ul>
+                                <li>거주자 본인 부담분만 공제 가능한 것으로, 배우자나 부양가족 명의로 불입한 연금보험료는 공제대상에 해당하지 않음</li>
+                                <li>거주자가 국민연금법 등 관련 법률에 따라 추가로 납부하는 연금보험료 등이 있는 경우 납부한 연도의 근로소득금액에서 공제하는 것임</li>
+                            </ul>
+                        </div>
+                    </section>
+                
+                    <section>
+                        <div class="blacktitle">                    
+                            <p>3. 특별소득공제</p>
+                        </div>
+
+                        <p class="explain"> 기본공제대상자가 다음 어느하나에 해당하는 경우 해당 과세기간 종합소득금액에서 다음에서 정해진 금액을 추가로 공제합니다.</p>
+                        
+                        <br>
+                        <table class="add-deduction">
+                            <thead>
+                                <tr>
+                                    <th>구분</th>
+                                    <th>공제요건 설명</th>
+                                    <th>공제금액</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>경로자공제</td>
+                                    <td>기본공제대상자 만 70세이상</td>
+                                    <td>1명당 연 100만원 공제</td>
+
+                                </tr>
+                                <tr>
+                                    <td>장애인공제</td>
+                                    <td>기본공제대상자가 장애인에 해당</td>
+                                    <td>1명당 연 200만원 공제</td>
+                                </tr>
+                                <tr>
+                                    <td>부녀자공제</td>
+                                    <td>종합소득금액이 3천만원 이하인 거주자가 ① 배우자가 있는 여성이거나 ② 배우자가 없는 여성으로서 기본공제대상자인 부양가족이 있는 세대주인 경우</td>
+                                    <td>연 50만원</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </section>
+
+                </article>
+
                 <div class="last-part"></div>
             </div>
-            <div class="footer">footer</div>
+            <footer class="footer">footer</footer>
         </div>
     </div>
     <script src="../index.js"></script>

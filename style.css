@@ -28,7 +28,9 @@ li {
 
 /*components*/
 
-
+section {
+    margin-top: 3em;
+}
 
 .top-bar {
     width: 100%;
@@ -177,7 +179,7 @@ li {
 }
 
 div .deduct-window {
-    background: url("../images/deduct_window.PNG");
+    background: url("./images/deduct_window.PNG");
     background-size: cover;
     /* background-position: center; */
     padding-top: 50%;   
@@ -231,6 +233,18 @@ div.blacktitle p {
     height: 100px;
 }
 
+.jusuk {
+    margin: 1em 0;
+    background-color: #b4b0eb;
+    font-size: 0.8em;
+    padding-left: 0;
+}
+
+.jusuk li  {
+    margin: 0.3em 0 0 1.5em;
+    padding: 0.3em 0;
+    list-style-type: disc;
+}
 
 @media screen and (min-width: 701px) {
     .container {
