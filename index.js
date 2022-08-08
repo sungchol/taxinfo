@@ -1,3 +1,5 @@
+"use strict"
+
 //menu button
 const menulist = document.getElementById("menulist");
 const submenu = document.querySelector(".submenu");
