@@ -85,19 +85,18 @@
         <div class="menubar">
             <div id="menulist"><img src="../images/menu.png" alt="menulist"></div>
             <div class="menu-origin">
-                <div class="menu active"><a href="../index.html">HOME</a></div>
-                <div class="menu"><a href="yearend/outline.html">연말정산</a></div>
+                <div class="menu"><a href="../index.html">HOME</a></div>
+                <div class="menu active"><a href="yearend/outline.html">연말정산</a></div>
                 <div class="menu"><a href="">소득세</a></div>
                 <div class="menu"><a href="">법인세</a></div>   
             </div>
             <div class="menu-short">
-                <div class="menu"><a href="index.html">HOME</a></div>
+                <div class="menu"><a href="../index.html">HOME</a></div>
             </div>
         </div>
 
         <div class="popupmenu">
             <ul>
-                <li><a href="../index.html">HOME</a></li>
                 <li><a href="outline.html">연말정산 개요</a></li>
                 <li><a href="outline.html#nts_yearend_deduction">연말정산간소화 조회</a></li>
                 <li><a href="outline.html#wagetax-structure">근로소득세 계산 구조</a></li>
@@ -128,8 +127,8 @@
                 <li><a href="income_inform2.html#">세액감면</a></li>
                 <li><a href="income_inform2.html#">세액공제</a></li>
             </ul>
-        </div>
-        <div class="content">
+          </div>
+          <div class="content">
             
             <a name="tax-rate"></a>
             <article class="content-part">
@@ -306,6 +305,28 @@
                     <table class="salary-credit">
                         <thead>
                             <tr>
+                                <th>산출세액</th>
+                                <th>세액공제금액</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>130만원 이하</td>
+                                <td>산출세액 × 55% </td>
+                            </tr>
+                            <tr>
+                                <td>130만원 초과</td>
+                                <td>71만 5천원 + 130만원 초과 산출세액 × 55% </td>
+                            </tr>
+                            
+                           
+                        </tbody>
+                    </table>
+
+                    <h4> 나. 세액공제한도</h4>
+                    <table class="salary-credit">
+                        <thead>
+                            <tr>
                                 <th>총급여액</th>
                                 <th>세액공제금액 한도액</th>
                             </tr>
@@ -323,7 +344,7 @@
                                         <li>①74만원 - [(총급여 - 3,300만원) × 0.8%]</li>
                                         <li>②66만원</li>
                                     </ul>
-                                </td>
+                                     </td>
                             </tr>
                             <tr>
                                 <td>7천만원 초과</td>
@@ -335,9 +356,16 @@
                                     </ul>
                                 </td>
                             </tr>
-                           
+                            <tr>
+                                <td colspan="3">
+                                    <div>[중소기업취업자 소득세감면 받은 경우]</div>
+                                    <div><b>근로소득세액공제×(1 - 감면세액÷산출세액)</b></div>
+                                </td>
+
+                            </tr>
                         </tbody>
                     </table>
+                    
                     
                 </section>
             </article>
