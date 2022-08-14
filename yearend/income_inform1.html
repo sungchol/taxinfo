@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko">    
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Song+Myung&display=swap" rel="stylesheet"> 
-    
+    <script src="https://kit.fontawesome.com/cad229b8bd.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../style.css">
     <title>연말정산-비과세, 근로소득공제</title>
     <style>
@@ -69,12 +69,13 @@
             /* text-align: center; */
             width: 6em;
         }
+
         .special-deduction.house td:nth-child(2),
         .other-deduction td:nth-child(2) {
             /* text-align: center; */
             width: 70%;
         }
-     
+        
         .other-deduction2 td:nth-child(1) {
             width: 8em;
         }
@@ -89,11 +90,16 @@
     <div class="top-bar"></div>
     <div class="container">
         <div class="menubar">
-            <div class="menu" id="menulist"><img src="../images/menu.png" alt="menulist"></div>
-            <div class="menu"><a href="../index.html">HOME</a></div>
-            <div class="menu active"><a href="outline.html">연말정산</a></div>
-            <div class="menu"><a href="">소득세</a></div>
-            <div class="menu"><a href="">법인세</a></div>   
+            <div id="menulist"><img src="../images/menu.png" alt="menulist"></div>
+            <div class="menu-origin">
+                <div class="menu"><a href="../index.html">HOME</a></div>
+                <div class="menu active"><a href="outline.html">연말정산</a></div>
+                <div class="menu"><a href="">소득세</a></div>
+                <div class="menu"><a href="">법인세</a></div>   
+            </div>
+            <div class="menu-short">
+                <div class="menu"><a href="../index.html">HOME</a></div>
+            </div>
         </div>
         
         <div class="content-container">
@@ -102,20 +108,62 @@
                     <li><a href="../index.html">HOME</a></li>
                     <li><a href="outline.html">연말정산 개요</a></li>
                     <li><a href="outline.html#nts_yearend_deduction">연말정산간소화 조회</a></li>
-                    <li><a href="income_inform1.html">비과세급여</a></li>
-                    <li><a href="#">근로소득공제</a></li>
-                    <li><a href="#">인적공제</a></li>
-                    <li><a href="#">연금보험료공제</a></li>
-                    <li><a href="#">특별소득공제</a></li>
-                    <li><a href="#">세액공제감면</a></li>
-                    <li><a href="#">월세액공제</a></li>
+                    <li><a href="outline.html#wagetax-structure">근로소득세 계산 구조</a></li>
+                    <li><a href="income_inform1.html#notax">비과세급여</a></li>
+                    <li><a href="income_inform1.html#salary-deductions">근로소득공제</a></li>
+                    <li><a href="income_inform1.html#deduction">종합소득공제
+                        <i id="item-open" class="fa-solid fa-caret-down"></i>
+                    </a></li>
+                    <ul class="detail-menu">
+                        <li><a href="income_inform1.html#person-deduction">인적공제</a></li>
+                        <li><a href="income_inform1.html#pension-deduction">연금보험료공제</a></li>
+                        <li><a href="income_inform1.html#special-deduction">특별공제
+                            <i id="item-open" class="fa-solid fa-caret-down"></i>
+                        </a></li>
+                        <ul class="detail-menu2">
+                            <li><a href="income_inform1.html#insurance-special-deduction">건강보험료공제</li></a> 
+                            <li><a href="income_inform1.html#house-special-deduction">주택자금공제</li></a>  
+                        </ul>
+                        <li><a href="income_inform1.html#other-deduction">신용카드공제 등</a></li>
+                    </ul>
+                    
+                    <li><a href="income_inform2.html#tax-rate">세율표</a></li>
+                    
+                    <li><a href="income_inform2.html#tax-reduction">세액감면 
+                        <i id="item-open" class="fa-solid fa-caret-down"></i></a>
+                    </li>
+                    <ul class="detail-menu">
+                        <li><a href="income_inform2.html#smallcompany-tax-reduction">중소기업취업자감면</a></li>
+                    </ul>
+                    
+                
+                    <li><a href="income_inform2.html#tax-credit">세액공제 
+                        <i class="fa-solid fa-caret-down"></i></a>
+                    </li>
+                    <ul class="detail-menu">
+                        <li><a href="income_inform2.html#wage-tax-credit">근로소득세액공제</a></li>
+                        <li><a href="income_inform2.html#children-tax-credit">자녀세액공제</a></li>
+                        <li><a href="income_inform2.html#pension-tax-credit">연금계좌세액공제</a></li>
+                        <li><a href="income_inform2.html#special-tax-credit">특별세액공제
+                            <i class="fa-solid fa-caret-down"></i></a>
+                        </li>
+                        <ul class="detail-menu2">
+                            <li><a href="income_inform2.html#insurance-tax-credit">보험료세액공제</a></li>
+                            <li><a href="income_inform2.html#treatment-tax-credit">의료비세액공제</a></li>
+                            <li><a href="income_inform2.html#education-tax-credit">교육비세액공제</a></li> 
+                            <li><a href="income_inform2.html#charity-tax-credit">기부금세액공제</a></li>
+                        </ul>
+                        <li><a href="income_inform2.html#rent-tax-credit">월세 세액공제</a></li>
+                    </ul>
+                
+    
                 </ul>
-            </div>
+              </div>
             <div class="content">
                 
                 <a name="notax"></a>
                 <article class="content-part">
-                    <h2 class="subtitle">비과세 급여</h2>
+                    <h2 class="subtitle"  style="margin-top: 1.5em;">비과세 급여</h2>
                     <p class="explain"> 근로자에게 지급하는 숙직비, 월20만원이내의 자기차량운전보조금 등 실비변상적인 급여, 국외근로소득, 생산직근로자의 야간수당등 소득세법에 비과세소득으로 열거된 소득은 비과세하고 있습니다. </p>
                     <section>
                         <div class="blacktitle">                        
@@ -250,9 +298,10 @@
 
                 <a name="deduction"></a>
                 <article class="content-part">
-                    <h2 class="subtitle">소득공제</h2>
+                    <h2 class="subtitle">종합소득공제</h2>
                     <p class="explain">근로소득금액에서 인적공제(기본공제, 추가공제), 연금보험료공제, 특별소득공제, 신용카드등 사용금액공제 등 기타소득공제를 차감하여 과세표준을 계산합니다.</p>
                     
+                    <a name="person-deduction"></a>
                     <section>
                         <div class="blacktitle">                    
                             <p>1. 인적공제 중 기본공제</p>
@@ -382,6 +431,7 @@
                     </section>
                 
                     <a name="special-deduction"></a>
+                    <br>
                     <section>
                         <div class="blacktitle">                    
                             <p>4. 특별소득공제</p>
@@ -389,6 +439,7 @@
 
                         <p class="explain"> 특별소득공제는 근로소득이 있는 거주자(일용근로자제외)만 적용되는 공제로, 해당연도 종합소득금액을 초과하는 경우 그 초과하는 금액은 공제하지 않습니다.</p>
                         
+                        <a name="insurance-special-deduction"></a>
                         <div class="explain detail">
                             <h3>가. 보험료공제</h3>
                             <p><strong>근로소득이 있는 거주자</strong>가 해당 과세기간에 ｢국민건강보험법｣, ｢고용보험법｣ 또는 ｢노인장기요양보험법｣에 따라 근로자 <strong>본인이 납부한 보험료</strong>를 납부한 과세기간 근로소득금액에서 공제합니다.</p>
@@ -416,6 +467,7 @@
                             </div>
                         </div>
                                                 
+                        <a name="house-special-deduction"></a>
                         <div class="explain detail">
                             <h3>나. 주택자금공제</h3>
                             <p>주택자금공제는 <strong>근로소득이 있는 거주자</strong>가 원칙적으로 세대주에 해당하는 경우 공제대상이 되며, 근로자 본인이 직접 부담한 경우 공제대상이 됩니다.</p>
@@ -670,7 +722,15 @@
 
                 <div class="last-part"></div>
             </div>
-            <footer class="footer">footer</footer>
+            <footer class="footer">
+                <div>
+                    <div class="__title">#세금상식#</div>
+                    <ul>
+                        <li>검증된 내용을 작성하였으나, 적용결과에 대한 책임은 지지 않습니다</li>
+                        <li>실제 적용시 전문가와 상의하기 바랍니다</li>
+                    </ul>    
+                </div>
+            </footer>
         </div>
     </div>
     <script src="../index.js"></script>
