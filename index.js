@@ -79,16 +79,5 @@ function openSubmenu(item)
     menu.classList.toggle('active');
 }
 
-// ScrollOut({
-//     onShown: (element) => {
-//       new TypeIt(element.querySelector('.title'), {
-//         startDelay: 200,
-//         cursor: false,
-//       }).pause(1000).go();
-//     },
-//   });
-
- 
 ScrollOut();
-
 
