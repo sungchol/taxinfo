@@ -87,8 +87,5 @@ function openSubmenu(item)
 //       }).pause(1000).go();
 //     },
 //   });
-
  
 ScrollOut();
-
-
