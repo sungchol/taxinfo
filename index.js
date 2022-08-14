@@ -2,84 +2,93 @@
 
 //menu button
 const menulist = document.getElementById("menulist");
-const submenu = document.querySelector(".submenu");
-const submenuContainer = document.querySelector(".submenu-container");
+const popupmenu = document.querySelector(".popupmenu");
 const content = document.querySelector(".content");
-let isOpen = false;
+
+const submenuContainer = document.querySelector(".submenu-container");
+const submenu = document.querySelector(".submenu");
+
+const bigWindow = 800;
+// popupmenu 상태저장
+let isPopup = false;
+let menuPosX = 0;
+let menuHeight = 300;
+let contentHeight = content.getBoundingClientRect().height;
 
 //팝업메뉴 열고 닫기
-function menuOpen() {
-    if(!isOpen)
+function menuOpen(open) {
+    if(open)
     {
-        submenuContainer.style.display = "initial";
-        isOpen = true;
+        submenuContainer.style.display = "block";
+        submenuContainer.style.left = (menuPosX)+"px";
+        submenu.style.height = menuHeight.toString() + "px"; 
+        isPopup = true;
     }
     else {
-        submenuContainer.style.display = "none";
-        isOpen = false;
+        submenuContainer.removeAttribute("style"); //.display = "none";
+        //.submenuContainer.style.left = "0";
+        isPopup = false;
     }
 }
 
-submenu.addEventListener("click", (e) => {
-    if(window.innerWidth <= 700){
-        // console.log("click : " + e.target);
-        menuOpen();
+submenuContainer.addEventListener("click", () => {
+    //팝업메뉴가 열려있을 때 팝업메뉴 클릭시 닫기
+    console.log(submenuContainer.childNodes.values());
+    if(isPopup)  {
+        menuOpen(false);    
     }
 }, false);
 
-content.addEventListener("click", (e) => {
-    if(window.innerWidth <= 700 && isOpen){
-        console.log("containerclick : " + e);
-        submenuContainer.style.display = "none";
-        isOpen = false;
-    }
+content.addEventListener("click", () => {
+    menuOpen(false); 
 }, false);
-// function getOffset( el ) {
-//     let _x = 0;
-//     let _y = 0;
-//     while( el && !isNaN( el.offsetLeft ) && !isNaN( el.offsetTop ) ) {
-//           _x += el.offsetLeft - el.scrollLeft;
-//           _y += el.offsetTop - el.scrollTop;
-//           el = el.offsetParent;
-//     }
-//     return { top: _y, left: _x };
-// }
 
 menulist.onclick = function () {
     
-    // let menuPosX = getOffset(menulist).left -5;
-    let menuPosX = menulist.getBoundingClientRect().left - 5;
-    if(menuPosX<7) menuPosX = 7;
-
-    if(!isOpen)
-    {
-        submenuContainer.style.display = "initial";
-        submenu.style.left = (menuPosX)+"px";
-        isOpen = true;
-        console.log(menuPosX);
-        
-    }
-    else {
-        submenuContainer.removeAttribute("style");
-        submenu.removeAttribute("style");
-        isOpen = false;
-        
-    }
+    menuPosX = menulist.getBoundingClientRect().left + 5;
+    menuPosX = menuPosX<5 ? 5: menuPosX;
+    // console.log("menulist clicked Height: " + window.innerHeight);
+    menuHeight = window.innerHeight - 50;
+    // if(menuHeight > 600) menuHeight = 600;
+    isPopup = !isPopup;
+    menuOpen(isPopup);
 };
 
-
-submenu.onmouseover = function() {
-    if(window.innerWidth <= 700)
-    {
-        submenuContainer.style.display = "initial";
-        isOpen= true;
+//if popup is opened, keep it opened
+submenuContainer.onmouseover = function() {
+    if(window.innerWidth < bigWindow){
+        if(!isPopup) {
+            menuOpen(true);
+        }
     }
 }
 
+//if mouse is outside of popup, close popup menu
 submenu.onmouseout = function() {
-    if(window.innerWidth <= 700) {
-        submenuContainer.removeAttribute("style");
-        isOpen = false;
+    if(window.innerWidth < bigWindow){
+        if(isPopup) {
+            menuOpen(false);
+        }
     }
 }
+
+function openSubmenu(item)
+{
+    console.log(item);
+    const menu = document.getElementById(item);
+    menu.classList.toggle('active');
+}
+
+// ScrollOut({
+//     onShown: (element) => {
+//       new TypeIt(element.querySelector('.title'), {
+//         startDelay: 200,
+//         cursor: false,
+//       }).pause(1000).go();
+//     },
+//   });
+
+ 
+ScrollOut();
+
 

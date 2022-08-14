@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Song+Myung&display=swap" rel="stylesheet"> 
-    
+    <script src="https://kit.fontawesome.com/cad229b8bd.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../style.css">
     <title>연말정산 개요</title>
     <style>
@@ -19,7 +19,6 @@
             /* border: 1px solid blue; */
             border-collapse: collapse; /*separate;*/
             /* border-spacing: 2%; */
-            
         }
 
         td {
@@ -34,16 +33,16 @@
             border-bottom: 2px double blue;
         }
         
-        table tr td:nth-child(1) {
+        table td:nth-child(1) {
             text-align: right;
             width: 20px;
             
         }
-        table tr td:nth-child(2) {
+        table td:nth-child(2) {
             text-align: center;
             width: 180px;
         }
-        table tr td:nth-child(3) {
+        table td:nth-child(3) {
             font-size: 0.8em;
             /* width: 200px; */
         }
@@ -53,13 +52,18 @@
     <div class="top-bar"></div>
     <div class="container">
         <div class="menubar">
-            <div class="menu" id="menulist"><img src="../images/menu.png" alt="menulist"></div>
-            <div class="menu"><a href="../index.html">HOME</a></div>
-            <div class="menu active"><a href="outline.html">연말정산</a></div>
-            <div class="menu"><a href="">소득세</a></div>
-            <div class="menu"><a href="">법인세</a></div>   
+            <div id="menulist"><img src="../images/menu.png" alt="menulist"></div>
+            <div class="menu-origin">
+                <div class="menu"><a href="../index.html">HOME</a></div>
+                <div class="menu active"><a href="outline.html">연말정산</a></div>
+                <div class="menu"><a href="">소득세</a></div>
+                <div class="menu"><a href="">법인세</a></div>   
+            </div>
+            <div class="menu-short">
+                <div class="menu"><a href="../index.html">HOME</a></div>
+            </div>
         </div>
-        
+
         <div class="content-container">
             <div class="submenu-container">
                 <ul class="submenu">
@@ -67,23 +71,62 @@
                     <li><a href="outline.html">연말정산 개요</a></li>
                     <li><a href="outline.html#nts_yearend_deduction">연말정산간소화 조회</a></li>
                     <li><a href="outline.html#wagetax-structure">근로소득세 계산 구조</a></li>
-                    <li><a href="income_inform1.html">비과세급여</a></li>
+                    <li><a href="income_inform1.html#notax">비과세급여</a></li>
                     <li><a href="income_inform1.html#salary-deductions">근로소득공제</a></li>
-                    <li><a href="income_inform1.html#deduction">종합소득공제</a></li>
-                    <li><a href="income_inform1.html#deduction">인적공제</a></li>
-                    <li><a href="income_inform1.html#special-deduction">특별공제</a></li>
-                    <li><a href="income_inform2.html#">세율표</a></li>
-                    <li><a href="income_inform2.html">세액감면</a></li>
-                    <li><a href="income_inform2.html">세액공제</a></li>
+                    <li><a href="income_inform1.html#deduction">종합소득공제
+                        <i id="item-open" class="fa-solid fa-caret-down"></i>
+                    </a></li>
+                    <ul class="detail-menu">
+                        <li><a href="income_inform1.html#person-deduction">인적공제</a></li>
+                        <li><a href="income_inform1.html#pension-deduction">연금보험료공제</a></li>
+                        <li><a href="income_inform1.html#special-deduction">특별공제
+                            <i id="item-open" class="fa-solid fa-caret-down"></i>
+                        </a></li>
+                        <ul class="detail-menu2">
+                            <li><a href="income_inform1.html#insurance-special-deduction">건강보험료공제</li></a> 
+                            <li><a href="income_inform1.html#house-special-deduction">주택자금공제</li></a>  
+                        </ul>
+                        <li><a href="income_inform1.html#other-deduction">신용카드공제 등</a></li>
+                    </ul>
+                    
+                    <li><a href="income_inform2.html#tax-rate">세율표</a></li>
+                    
+                    <li><a href="income_inform2.html#tax-reduction">세액감면 
+                        <i id="item-open" class="fa-solid fa-caret-down"></i></a>
+                    </li>
+                    <ul class="detail-menu">
+                        <li><a href="income_inform2.html#smallcompany-tax-reduction">중소기업취업자감면</a></li>
+                    </ul>
+                    
+                
+                    <li><a href="income_inform2.html#tax-credit">세액공제 
+                        <i class="fa-solid fa-caret-down"></i></a>
+                    </li>
+                    <ul class="detail-menu">
+                        <li><a href="income_inform2.html#wage-tax-credit">근로소득세액공제</a></li>
+                        <li><a href="income_inform2.html#children-tax-credit">자녀세액공제</a></li>
+                        <li><a href="income_inform2.html#pension-tax-credit">연금계좌세액공제</a></li>
+                        <li><a href="income_inform2.html#special-tax-credit">특별세액공제
+                            <i class="fa-solid fa-caret-down"></i></a>
+                        </li>
+                        <ul class="detail-menu2">
+                            <li><a href="income_inform2.html#insurance-tax-credit">보험료세액공제</a></li>
+                            <li><a href="income_inform2.html#treatment-tax-credit">의료비세액공제</a></li>
+                            <li><a href="income_inform2.html#education-tax-credit">교육비세액공제</a></li> 
+                            <li><a href="income_inform2.html#charity-tax-credit">기부금세액공제</a></li>
+                        </ul>
+                        <li><a href="income_inform2.html#rent-tax-credit">월세 세액공제</a></li>
+                    </ul>
+                
     
                 </ul>
-            </div>
+              </div>
             <div class="content">
                 <div class="content-part">
                     <h1 class="maintitle">연말정산 개요</h1>
                 </div>
                 <section class="content-part">
-                    <h2 class="subtitle">연말정산이란?</h2>
+                    <h2 class="subtitle"  style="margin-top: 1.5em;">연말정산이란?</h2>
                     <p class="explain">1년 동안 매달 원천징수된 세액을 연초에 지난해 1년간의 소득에 따라 정확하게 세액을 산정한 후, 1년간 원천징수한 세액과 비교하여 추가납부 또는 환급액을 산정하는 절차로서, </p>
                     <p class="explain">근로소득자의 납세편의를 도모하기 위해 근로자가 직접 소득세 확정신고 대신 원천징수의무자(회사)에게 연말정산 공제서류를 회사에 제출하여 회사에서  근로소득세액을 정산하는 제도입니다.</p>
                 </section>
@@ -100,8 +143,9 @@
                     <p>중도퇴사자의 경우는 회사에서 퇴사하는 달에 기본적인 공제만 적용하여 세액정산을 하므로, 본인이 다음해 5월달에 종합소득세를 신고하여 누락된 소득공제 세액공제를 신고하거나, 재취업한 회사(최종근무지)에 중도퇴사분의 근로소득원천징수영수증을 제출하여 합산정산하여야 합니다.</p>
                     <p>직장을 옮겨서 근무지가 여러 곳인 경우, 반드시 다수 근무지 근로소득을 모두 합산하여 연말정산(또는 5월에 종합소득세신고)하여야 하며, 이런 경우 환급세액 보다는 납부세액이 발생하는 경우가 많습니다.</p>
                 </section>
+
+                <a name="nts_yearend_deduction"></a>
                 <section class="content-part">
-                    <a name="nts_yearend_deduction"></a>
                     <h2 class="subtitle">연말정산간소화 서비스</h2>
                     <p class="explain">소득공제 및 세액공제는 <b>홈택스 연말정산간소화</b>서비스를 이용하여 파일로 다운로드받거나 출력할 수 있으며, 연말정산간소화 서비스 접속은 홈택스(www.hometax.go.kr) ➜ 조회/발급 ➜ 연말정산간소화 클릭하면 됩니다.</p>
                     <div class="blacktitle">                        
@@ -112,8 +156,8 @@
                     <p><b>주의사항</b> : 일부 영수증 발급기관이 국세청에 제출하지 않은 자료가 있는 경우가 있는데, 이 경우에는 연말정산 간소화 서비스에서 조회되지 않으며, 해당 기관에서 직접 증명서류 발급요청을하여 공제증빙영수증을 챙겨야합니다.</p>
                 </section>
 
+                <a name="wagetax-structure"></a>
                 <section class="content-part">
-                    <a name="wagetax-structure"></a>
                     <h2 class="subtitle">근로소득 세액계산 구조</h2>
                     <table>
                         <thead>
@@ -147,7 +191,7 @@
                             </tr>
                             <tr>
                                 <td>(-)</td>
-                                <td><a href="income_inform1.html#deduction">인적공제</a></td>
+                                <td><a href="income_inform1.html#person-deduction">인적공제</a></td>
                                 <td>(부양가족공제, 추가공제 등)</td>
                             </tr>
                             <tr>
@@ -157,7 +201,7 @@
                             </tr>
                             <tr>
                                 <td>(-)</td>
-                                <td><a href="income_inform1.html#specail-deduction">특별소득공제</a></td>
+                                <td><a href="income_inform1.html#special-deduction">특별소득공제</a></td>
                                 <td class="cal-detail">(건강보험료, 주택자금공제)</td>
                             </tr>
                             <tr>
@@ -173,12 +217,12 @@
                             </tr>
                             <tr>
                                 <td>(x)</td>
-                                <td class="underline"><a href="income_inform1.html#tax-rate">세율</a></td>
+                                <td class="underline"><a href="income_inform2.html#tax-rate">세율</a></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
-                                <td><a href="income_inform2.html#tax-rate"><b>산출세액</b></a></td>
+                                <td><a href="income_inform2.html"><b>산출세액</b></a></td>
                                 <td></td>
                             </tr>
                             <tr>
@@ -188,27 +232,27 @@
                             </tr>
                             <tr>
                                 <td>(-)</td>
-                                <td><a href="income_inform2.html#tax-reduction">근로소득세액공제</a></td>
+                                <td><a href="income_inform2.html#wage-tax-credit">근로소득세액공제</a></td>
                                 <td class="cal-detail">(법에 따라 자동으로 계산됨)</td>
                             </tr>
                             <tr>
                                 <td>(-)</td>
-                                <td><a href="income_inform2.html#tax-reduction">자녀세액공제</a></td>
+                                <td><a href="income_inform2.html#children-tax-credit">자녀세액공제</a></td>
                                 <td class="cal-detail">(7세 이상 기본공제대상 자녀)</td>
                             </tr>
                             <tr>
                                 <td>(-)</td>
-                                <td><a href="income_inform2.html#tax-reduction">연금계좌세액공제</a></td>
+                                <td><a href="income_inform2.html#pension-tax-credit">연금계좌세액공제</a></td>
                                 <td class="cal-detail">(연금저축, 퇴직연금)</td>
                             </tr>
                             <tr>
                                 <td>(-)</td>
-                                <td><a href="income_inform2.html#tax-reduction">특별세액공제</a></td>
+                                <td><a href="income_inform2.html#special-tax-credit">특별세액공제</a></td>
                                 <td class="cal-detail">(보장성보험, 의료비, 교육비, 기부금)</td>
                             </tr>
                             <tr>
                                 <td>(-)</td>
-                                <td class="underline"><a href="income_inform2.html#tax-reduction">월세액공제 등</a></td>
+                                <td class="underline"><a href="income_inform2.html#rent-tax-credit">월세액공제 등</a></td>
                                 <td></td>
                             </tr>
                             
@@ -233,7 +277,15 @@
                 </section>
                 <div class="last-part"></div>
             </div>
-            <footer class="footer">footer</footer>
+            <footer class="footer">
+                <div>
+                    <div class="__title">#세금상식#</div>
+                    <ul>
+                        <li>검증된 내용을 작성하였으나, 적용결과에 대한 책임은 지지 않습니다</li>
+                        <li>실제 적용시 전문가와 상의하기 바랍니다</li>
+                    </ul>    
+                </div>
+            </footer>
         </div>
     </div>
     <script src="../index.js"></script>
