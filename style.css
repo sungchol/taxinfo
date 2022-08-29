@@ -79,6 +79,7 @@ section {
     margin: 0 0.3em;
     padding: 1px 0.3em 0px 0.3em;
     transform: scale(1);
+	transition: 0.5s;
 }
 
 #menulist:hover {
@@ -135,6 +136,9 @@ section {
 
 .submenu-container .submenu ul {
     margin-top: 0.5em;
+	transition: 0.5s;
+	color: inherit;	
+	transition: 0.5s;
 }
 
 .submenu-container .submenu li {
@@ -356,6 +360,9 @@ div.blacktitle p {
   background-repeat: no-repeat;
 }
 
+.content.main .title {
+	text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
 .scroll-box {
     width: 95%;
     margin: 10rem auto;
@@ -479,6 +486,7 @@ div.blacktitle p {
     .submenu-container li {
         padding-left: 0.5em;
         border-radius: 5px;
+		transition: 0.2s;
         
     }
     .submenu-container .submenu li:hover {
