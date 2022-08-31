@@ -28,6 +28,11 @@ let isPopup = false;
 let menuPosX = 0;
 let menuHeight = 300;
 let contentHeight = content.getBoundingClientRect().height;
+const links = submenu.querySelectorAll("li a");
+const linklists = new Array();
+for (let i = 0; i < links.length; i++) {
+  linklists.push(links[i]);
+}
 
 //팝업메뉴 열고 닫기
 function menuOpen(open) {
@@ -52,7 +57,10 @@ submenuContainer.addEventListener(
       itemOpens[index].classList.toggle("rotate180");
       items[index].classList.toggle("show");
     } else if (isPopup) {
-      menuOpen(false);
+      console.log(linklists.indexOf(e.target), e.target);
+      if (linklists.indexOf(e.target) >= 0) {
+        menuOpen(false);
+      }
     }
   },
   false

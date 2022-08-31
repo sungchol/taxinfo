@@ -4,49 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="연말정산에 관한 정보"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Song+Myung&display=swap" rel="stylesheet"> 
-    <script src="https://kit.fontawesome.com/cad229b8bd.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/cad229b8bd.js" crossorigin="anonymous"></script> -->
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../table.css">
     <title>연말정산 개요</title>
-    <style>
-        table {
-            margin: 0 auto;
-            table-layout: fixed;
-            width: 95%;
-            /* border: 1px solid blue; */
-            border-collapse: collapse; /*separate;*/
-            /* border-spacing: 2%; */
-        }
-
-        td {
-            padding: 0.3em 0;
-        } 
-        
-        table .underline {
-            border-bottom: 1px solid blue;
-        }
-
-        table .lastline {
-            border-bottom: 2px double blue;
-        }
-        
-        table td:nth-child(1) {
-            text-align: right;
-            width: 20px;
-            
-        }
-        table td:nth-child(2) {
-            text-align: center;
-            width: 180px;
-        }
-        table td:nth-child(3) {
-            font-size: 0.8em;
-            /* width: 200px; */
-        }
-    </style>
 </head>
 <body>
     <div class="top-bar"></div>
@@ -69,53 +38,58 @@
                 <ul class="submenu">
                     <li><a href="../index.html">HOME</a></li>
                     <li><a href="outline.html">연말정산 개요</a></li>
-                    <li><a href="outline.html#nts_yearend_deduction">연말정산간소화 조회</a></li>
-                    <li><a href="outline.html#wagetax-structure">근로소득세 계산 구조</a></li>
-                    <li><a href="income_inform1.html#notax">비과세급여</a></li>
-                    <li><a href="income_inform1.html#salary-deductions">근로소득공제</a></li>
-                    <li><a href="income_inform1.html#deduction">종합소득공제</a>
-                        <i class="fa-solid fa-caret-down" id="item-open1" ></i>
+                    <li><a href="#nts_yearend_deduction">연말정산간소화 조회</a></li>
+                    <li><a href="#wagetax-structure">근로소득세 계산 구조</a></li>
+                    <li><a href="#notax">비과세급여</a></li>
+                    <li><a href="#salary-deductions">근로소득공제</a></li>
+                    <li><a href="#deduction">종합소득공제</a>
+                        <!-- <i class="fa-solid fa-caret-down" id="item-open1" ></i> -->
+                        <span class="arrow" id="item-open1">&#x25bc</span>
                     </li>
                     <ul id="item1" class="detail-menu">
-                        <li><a href="income_inform1.html#person-deduction">인적공제</a></li>
-                        <li><a href="income_inform1.html#pension-deduction">연금보험료공제</a></li>
-                        <li><a href="income_inform1.html#special-deduction">특별공제</a>
-                            <i id="item-open2" class="fa-solid fa-caret-down"></i>
+                        <li><a href="#person-deduction">인적공제</a></li>
+                        <li><a href="#pension-deduction">연금보험료공제</a></li>
+                        <li><a href="#special-deduction">특별공제</a>
+                            <!-- <i id="item-open2" class="fa-solid fa-caret-down"></i> -->
+                            <span class="arrow" id="item-open2">&#x25bc</span>
                         </li>
                         <ul id="item2" class="detail-menu2">
-                            <li><a href="income_inform1.html#insurance-special-deduction">건강보험료공제</li></a> 
-                            <li><a href="income_inform1.html#house-special-deduction">주택자금공제</li></a>  
+                            <li><a href="#insurance-special-deduction">건강보험료공제</li></a> 
+                            <li><a href="#house-special-deduction">주택자금공제</li></a>  
                         </ul>
-                        <li><a href="income_inform1.html#other-deduction">신용카드공제 등</a></li>
+                        <li><a href="#other-deduction">신용카드공제 등</a></li>
                     </ul>
                     
-                    <li><a href="income_inform2.html#tax-rate">세율표</a></li>
+                    <li><a href="#tax-rate">세율표</a></li>
                     
-                    <li><a href="income_inform2.html#tax-reduction">세액감면</a>
-                        <i id="item-open3" class="fa-solid fa-caret-down"></i>
+                    <li><a href="#tax-reduction">세액감면</a>
+                        <!-- <i id="item-open3" class="fa-solid fa-caret-down"></i> -->
+                        <span class="arrow" id="item-open3">&#x25bc</span>
                     </li>
                     <ul id="item3" class="detail-menu">
-                        <li><a href="income_inform2.html#smallcompany-tax-reduction">중소기업취업자감면</a></li>
+                        <li><a href="#smallcompany-tax-reduction">중소기업취업자감면</a></li>
                     </ul>
                     
                 
-                    <li><a href="income_inform2.html#tax-credit">세액공제</a>
-                        <i id="item-open4" class="fa-solid fa-caret-down"></i>
+                    <li><a href="#tax-credit">세액공제</a>
+                        <!-- <i id="item-open4" class="fa-solid fa-caret-down"></i> -->
+                        <span class="arrow" id="item-open4">&#x25bc</span>
                     </li>
                     <ul id="item4" class="detail-menu">
-                        <li><a href="income_inform2.html#wage-tax-credit">근로소득세액공제</a></li>
-                        <li><a href="income_inform2.html#children-tax-credit">자녀세액공제</a></li>
-                        <li><a href="income_inform2.html#pension-tax-credit">연금계좌세액공제</a></li>
-                        <li><a href="income_inform2.html#special-tax-credit">특별세액공제</a>
-                            <i id="item-open5" class="fa-solid fa-caret-down"></i>
+                        <li><a href="#wage-tax-credit">근로소득세액공제</a></li>
+                        <li><a href="#children-tax-credit">자녀세액공제</a></li>
+                        <li><a href="#pension-tax-credit">연금계좌세액공제</a></li>
+                        <li><a href="#special-tax-credit">특별세액공제</a>
+                            <!-- <i id="item-open5" class="fa-solid fa-caret-down"></i> -->
+                            <span class="arrow" id="item-open5">&#x25bc</span>
                         </li>
                         <ul id="item5" class="detail-menu2">
-                            <li><a href="income_inform2.html#insurance-tax-credit">보험료세액공제</a></li>
-                            <li><a href="income_inform2.html#treatment-tax-credit">의료비세액공제</a></li>
-                            <li><a href="income_inform2.html#education-tax-credit">교육비세액공제</a></li> 
-                            <li><a href="income_inform2.html#charity-tax-credit">기부금세액공제</a></li>
+                            <li><a href="#insurance-tax-credit">보험료세액공제</a></li>
+                            <li><a href="#treatment-tax-credit">의료비세액공제</a></li>
+                            <li><a href="#education-tax-credit">교육비세액공제</a></li> 
+                            <li><a href="#charity-tax-credit">기부금세액공제</a></li>
                         </ul>
-                        <li><a href="income_inform2.html#rent-tax-credit">월세 세액공제</a></li>
+                        <li><a href="#rent-tax-credit">월세 세액공제</a></li>
                     </ul>
                 
                 </ul>
@@ -158,7 +132,7 @@
                 <a name="wagetax-structure"></a>
                 <section class="content-part">
                     <h2 class="subtitle">근로소득 세액계산 구조</h2>
-                    <table>
+                    <table class="tax-structure">
                         <thead>
                         </thead>
                         <tbody>
@@ -169,7 +143,7 @@
                             </tr>
                             <tr>
                                 <td>(-)</td>
-                                <td class="underline"><a href="income_inform1.html">비과세급여</a></td>
+                                <td class="underline"><a href="#notax">비과세급여</a></td>
                                 <td ></td>
                             </tr>
                             
@@ -180,7 +154,7 @@
                             </tr>
                             <tr>
                                 <td>(-)</td>
-                                <td class="underline"><a href="income_inform1.html#salary-deductions">근로소득공제</a></td>
+                                <td class="underline"><a href="#salary-deductions">근로소득공제</a></td>
                                 <td></td>
                             </tr>
                             <tr>
@@ -190,22 +164,22 @@
                             </tr>
                             <tr>
                                 <td>(-)</td>
-                                <td><a href="income_inform1.html#person-deduction">인적공제</a></td>
+                                <td><a href="#person-deduction">인적공제</a></td>
                                 <td>(부양가족공제, 추가공제 등)</td>
                             </tr>
                             <tr>
                                 <td>(-)</td>
-                                <td><a href="income_inform1.html#pension-deduction">연금보험료공제</a></td>
+                                <td><a href="#pension-deduction">연금보험료공제</a></td>
                                 <td>(국민연금보험료 등 공적연금납부액)</td>
                             </tr>
                             <tr>
                                 <td>(-)</td>
-                                <td><a href="income_inform1.html#special-deduction">특별소득공제</a></td>
+                                <td><a href="#special-deduction">특별소득공제</a></td>
                                 <td class="cal-detail">(건강보험료, 주택자금공제)</td>
                             </tr>
                             <tr>
                                 <td>(-)</td>
-                                <td class="underline"><a href="income_inform1.html#other-deduction">그 외 소득공제</a></td>
+                                <td class="underline"><a href="#other-deduction">그 외 소득공제</a></td>
                                 <td class="cal-detail">(신용카드사용공제, 주택마련저축 등)</td>
                             </tr>
                             
@@ -216,42 +190,42 @@
                             </tr>
                             <tr>
                                 <td>(x)</td>
-                                <td class="underline"><a href="income_inform2.html#tax-rate">세율</a></td>
+                                <td class="underline"><a href="#tax-rate">세율</a></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td></td>
-                                <td><a href="income_inform2.html"><b>산출세액</b></a></td>
+                                <td><a href=""><b>산출세액</b></a></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td>(-)</td>
-                                <td><a href="income_inform2.html#tax-reduction">세액감면</a></td>
+                                <td><a href="#tax-reduction">세액감면</a></td>
                                 <td class="cal-detail">(중소기업 취업자 소득세감면 등)</td>
                             </tr>
                             <tr>
                                 <td>(-)</td>
-                                <td><a href="income_inform2.html#wage-tax-credit">근로소득세액공제</a></td>
+                                <td><a href="#wage-tax-credit">근로소득세액공제</a></td>
                                 <td class="cal-detail">(법에 따라 자동으로 계산됨)</td>
                             </tr>
                             <tr>
                                 <td>(-)</td>
-                                <td><a href="income_inform2.html#children-tax-credit">자녀세액공제</a></td>
+                                <td><a href="#children-tax-credit">자녀세액공제</a></td>
                                 <td class="cal-detail">(7세 이상 기본공제대상 자녀)</td>
                             </tr>
                             <tr>
                                 <td>(-)</td>
-                                <td><a href="income_inform2.html#pension-tax-credit">연금계좌세액공제</a></td>
+                                <td><a href="#pension-tax-credit">연금계좌세액공제</a></td>
                                 <td class="cal-detail">(연금저축, 퇴직연금)</td>
                             </tr>
                             <tr>
                                 <td>(-)</td>
-                                <td><a href="income_inform2.html#special-tax-credit">특별세액공제</a></td>
+                                <td><a href="#special-tax-credit">특별세액공제</a></td>
                                 <td class="cal-detail">(보장성보험, 의료비, 교육비, 기부금)</td>
                             </tr>
                             <tr>
                                 <td>(-)</td>
-                                <td class="underline"><a href="income_inform2.html#rent-tax-credit">월세액공제 등</a></td>
+                                <td class="underline"><a href="#rent-tax-credit">월세액공제 등</a></td>
                                 <td></td>
                             </tr>
                             
@@ -274,6 +248,1253 @@
                         </tbody>
                     </table>
                 </section>
+                
+                <!--- 2page -------------->
+                <br><br>
+                <div class="content-part">
+                    <h1 class="maintitle">소득금액계산 &middot; 종합소득공제</h1>
+                </div>
+
+                <a name="notax"></a>
+                <article class="content-part">
+                    <h2 class="subtitle"  style="margin-top: 1.5em;">비과세 급여</h2>
+                    <p class="explain"> 근로자에게 지급하는 숙직비, 월20만원이내의 자기차량운전보조금 등 실비변상적인 급여, 국외근로소득, 생산직근로자의 야간수당등 소득세법에 비과세소득으로 열거된 소득은 비과세하고 있습니다. </p>
+                    <section>
+                        <div class="blacktitle">                        
+                            <p>비과세 급여 요약</p>
+                        </div>
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>구분</th>
+                                <th>비과세 급여요약</th>
+                            </tr> 
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>실비변상적급여</td>
+                                    <td>
+                                        <ul class="list-disc">
+                                            <li>일숙직비</li>
+                                            <li>월20만원 이내 자기차량운전보조금</li>
+                                            <li>제복, 제모, 제화</li>
+                                            <li>특수분야 종사자 수당, 천재지변 수당</li>
+                                            <li>학교의 교원이 받는 연구보조비 또는 연구활동비 중 월 20만원이내 금액</li>
+                                            <li>언론사에 근무하는 기자가 취재활동과 관련하여 받는 취재수당중 월20만원 이내금액</li>
+                                            <li>근로자가 벽지에 근무함으로 인하여 받는 월 20만원 이내의 벽지수당</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>비과세 식사대</td>
+                                    <td>
+                                        <ul class="list-disc">
+                                            <li>현물 식사(고용주가 무상으로 제공하는 음식물)</li>
+                                            <li>식사 등 음식물을 제공받지 아니하는 근무자가 받는 월 10만원 이하 식사대</li>
+                                        </ul>
+                                    </td>
+                                </tr>  
+                                <tr>
+                                    <td>국외근로소득</td>
+                                    <td>
+                                        <ul class="list-disc">
+                                            <li>국외 근로소득 중 월100만원 이내 금액</li>
+                                            <li>국외 항행선박 또는 국외 건설현장 근로소득 중 월300만원 이내 금액</li>
+                                        </ul>
+                                    </td>
+                                </tr> 
+                                <tr>
+                                    <td>야간근로수당</td>
+                                    <td>
+                                        <ul class="list-disc">
+                                            <li>생산직근로자로서 월정액급여 210만원 이하로서 직전 과세기간 총급여액이 3천만원이하인 근로자가 연장근로 야간근로 휴일근로를 하여 추가로 받는 급여 중 연240만원 이내 금액</li>
+                                            
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>벤처기업 StockOption 이익</td>
+                                    <td>
+                                        <ul class="list-disc">
+                                            <li>벤처기업 임직원이 벤처기업으로부터 2024년 12월 31일이전에 부여받은 주식매수선택권을 행사함으로써 얻은 이익(행사당시 시가와 실제 매수가액과의 차액) 중 연간 3천만원 이내금액 </li>
+                                            
+                                        </ul>
+                                    </td>
+                                </tr> 
+                                <tr>
+                                    <td>직무발명 보상금</td>
+                                    <td>
+                                        <ul class="list-disc">
+                                            <li>발명진흥법 제2조 제2호에 따른 종업원이 사용자로 부터 받는 보상금중 연500만원 이내금액 </li>
+                                            <li>대학의 교직원 또는 대학과 고용관계가 있는 학생이 소속 대학에 설치된 산학협력단으로 부터 받는 보상금중 연500만원 이내금액 </li>
+                                        </ul>
+                                    </td>
+                                </tr> 
+                                <tr>
+                                    <td>자녀보육수당 등<BR> 기타 비과세</td>
+                                    <td>
+                                        <ul class="list-disc">
+                                            <li>근로자 본인 또는 배우자의 출산이나 6세이하 자녀의 보육과 관련하여 받는 급여로서 월10만원 이내 금액 </li>
+                                            <li>｢고용보험법｣에 따른 실업급여⋅육아휴직 급여⋅육아기 근로시간 단축 급여, 출산전후휴가 급여</li>
+                                            <li>  공무원⋅교직원이 받는 육아휴직수당 </li>
+                                            <li>주주가 아닌 임원, 임원이 아닌 종업원 등이 받는 사택제공 이익 </li>
+                                            <li>중소기업 종업원의 주택 구입⋅임차 자금 저리 대여 이익 </li>
+                                            <li>단체순수보장성 보험 및 단체 환급부보장성 보험 중 70만 원 이하의 보험료 </li>
+                                            <li>공무원이 국가 또는 지방자치단체로부터 공무 수행과 관련하여 받는 상금과 부상 중 연240만원 이내의 금액 </li>
+                                        </ul>
+                                    </td>
+                                </tr> 
+                            </tbody>
+                        </table>
+                    </section>
+                    
+                </article>
+                <a name="salary-deductions"></a>
+                <article class="content-part">
+                    <h2 class="subtitle">근로소득공제</h2>
+                    <p class="explain"> 한해동안의 총급여액에서 법률로 정해진 근로소득공제(한도액 2천만원)를 차감하여 근로소득금액을 계산합니다. <br>근무기간이 1년 미만 이더라고 월할계산하지 아니하고, 근로소득자의 총급여액가 근로소득공제에 미달하는 경우에는 총급여액이 공제액이 됩니다.</p>
+                    <section>
+                        <div class="blacktitle">                    
+                            <p>근로소득공제금액 계산표</p>
+                        </div>
+                        <table>
+                            <thead>
+                            <tr>
+                                <th >총급여액</th>
+                                <th>근로소득공제 (공제한도 2천만원)</th>
+                            </tr> 
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>500만원 이하</td>
+                                    <td>총급여액 × 70%</td>
+                                </tr>
+                                <tr>
+                                    <td>500만원 초과 <br> 1500만원 이하</td>
+                                    <td>총급여액 × 40% + 100만원</td>
+                                </tr>
+                                <tr>
+                                    <td>1500만원 초과 <br> 4500만원 이하</td>
+                                    <td>총급여액 × 15% + 525만원</td>
+                                </tr>
+                                <tr>
+                                    <td>4500만원 초과 <br> 1억원 이하</td>
+                                    <td>총급여액 × 5% + 975만원</td>
+                                </tr>
+                                <tr>
+                                    <td>1억원 초과</td>
+                                    <td>총급여액 × 2% + 1275만원</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </article>
+
+                <a name="deduction"></a>
+                <article class="content-part">
+                    <h2 class="subtitle">종합소득공제</h2>
+                    <p class="explain">근로소득금액에서 인적공제(기본공제, 추가공제), 연금보험료공제, 특별소득공제, 신용카드등 사용금액공제 등 기타소득공제를 차감하여 과세표준을 계산합니다.</p>
+                    
+                    <a name="person-deduction"></a>
+                    <section>
+                        <div class="blacktitle">                    
+                            <p>1. 인적공제 중 기본공제</p>
+                        </div>
+
+                        <p class="explain"> 인적공제 중 기본공제는 아래표에 해당하는 사람(<strong>기본공제대상자</strong>)수에 <b>1명당 연150만원</b>을 곱한 금액을 공제하는 것을 말합니다.</p>
+                        
+                        <p class="explain"> 아래 연간소득금액은 총수입금액을 기준으로 금액을 산정하는 것이 아니라 총수입금액에서 필요경비를 제외한 소득금액을 말하는 것으로, 연간소득요건을 충족한다는 의미는 종합소득금액 · 퇴직소득금액 · 양도소득금액을 합한 금액이 연간 100만원이하이거나, 근로소득만 있는 경우에는 연간 총 500만원이하의 급여를 받은 경우를 뜻하는 것입니다.</p>
+
+                        <table class="basic-deduction">
+                            <thead>
+                                <tr>
+                                    <th>구분</th>
+                                    <th>공제요건 설명</th>
+                                    <th>나이요건</th>
+                                    <th>소득요건</td>
+                                    <th>주민등록<br>동거요건</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>본인</td>
+                                    <td>기본공제대상</td>
+                                    <td>없음</td>
+                                    <td>없음</td>
+                                    <td> </td>
+                                </tr>
+                                <tr>
+                                    <td>배우자</td>
+                                    <td>연간소득금액 100만원 이하</td>
+                                    <td>없음</td>
+                                    <td>있음</td>
+                                    <td>×</td>
+                                </tr>
+                                <tr>
+                                    <td>직계존속</td>
+                                    <td>근로자와 생계를 같이하는 만60세 이상의 직계존속(배우자의 직계존속포함)으로 연간소득금액 100만원 이하</td>
+                                    <td>있음</td>
+                                    <td>있음</td>
+                                    <td>별거허용</td>
+                                </tr>
+                                <tr>
+                                    <td>직계비속</td>
+                                    <td>근로자와 생계를 같이하는 만20세 이하의 자녀, 동거입양자로 연간소득금액 100만원 이하</td>
+                                    <td>있음</td>
+                                    <td>있음</td>
+                                    <td>×</td>
+                                </tr>
+                                <tr>
+                                    <td>형제자매</td>
+                                    <td>근로자와 생계를 같이하는 만20세 이하 또는 만60세 이상의 형제자매로 연간소득금액 100만원 이하</td>
+                                    <td>있음</td>
+                                    <td>있음</td>
+                                    <td>○</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="jusuk">
+                            <ul>
+                                <li>장애인의 경우 나이 제한을 받지 아니하나 연간소득금액이 100만원(근로소득만 있는 자는 총급여 500만원)을 초과하는 경우 기본공제대상에 해당되지 않음</li>
+                                <li>근로자 및 배우자의 형제자매는 기본공제대상에 포함될 수 있으나, 형제자매의 배우자(제수, 형수 등)는 기본공제대상에 포함하지 아니함</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="blacktitle">                    
+                            <p>2. 인적공제 중 추가공제</p>
+                        </div>
+
+                        <p class="explain"> 기본공제대상자가 다음 어느하나에 해당하는 경우 해당 과세기간 종합소득금액에서 다음에서 정해진 금액을 추가로 공제합니다.</p>
+
+                        <table class="add-deduction">
+                            <thead>
+                                <tr>
+                                    <th>구분</th>
+                                    <th>공제요건 설명</th>
+                                    <th>공제금액</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>경로자공제</td>
+                                    <td>기본공제대상자 만 70세이상</td>
+                                    <td>1명당 연 100만원 공제</td>
+
+                                </tr>
+                                <tr>
+                                    <td>장애인공제</td>
+                                    <td>기본공제대상자가 장애인에 해당</td>
+                                    <td>1명당 연 200만원 공제</td>
+                                </tr>
+                                <tr>
+                                    <td>부녀자공제</td>
+                                    <td>종합소득금액이 3천만원 이하인 거주자가 ① 배우자가 있는 여성이거나 ② 배우자가 없는 여성으로서 기본공제대상자인 부양가족이 있는 세대주인 경우</td>
+                                    <td>연 50만원</td>
+                                </tr>
+                                <tr>
+                                    <td>한부모공제</td>
+                                    <td>배우자가 없는 근로자로서 기본공제대상자인 직계비속 또는 입양자가 있는 경우</td>
+                                    <td>연 100만원</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="jusuk">
+                            <ul>
+                                <li>부녀자공제와 한부모공제가 중복되는 경우 한부모공제만 적용</li>
+                            </ul>
+                        </div>
+
+                    </section>
+                    
+                    <a name="pension-deduction"></a>
+                    <section>
+                        <div class="blacktitle">                    
+                            <p>3. 연금보험료 공제</p>
+                        </div>
+
+                        <p class="explain"> 종합소득이 있는 거주자가 국민연금, 공무원연금, 군인연금, 사립학교교직원연금 등 <strong>연금보험료 또는 기여금</strong>을 납입(부담)하는 경우 해당 과세기간 종합소득금액에서 <strong>해당 과세기간 납입한 연금보험료를 공제</strong>합니다. 단, 연금보험료 합계액이 종합소득금액을 초과하는 경우 초과분은 공제하지 않습니다.</p>
+                        
+                        <div class="jusuk">
+                            <ul>
+                                <li>거주자 본인 부담분만 공제 가능한 것으로, 배우자나 부양가족 명의로 불입한 연금보험료는 공제대상에 해당하지 않음</li>
+                                <li>거주자가 국민연금법 등 관련 법률에 따라 추가로 납부하는 연금보험료 등이 있는 경우 납부한 연도의 근로소득금액에서 공제하는 것임</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <a name="special-deduction"></a>
+                    <br>
+                    <section>
+                        <div class="blacktitle">                    
+                            <p>4. 특별소득공제</p>
+                        </div>
+
+                        <p class="explain"> 특별소득공제는 근로소득이 있는 거주자(일용근로자제외)만 적용되는 공제로, 해당연도 종합소득금액을 초과하는 경우 그 초과하는 금액은 공제하지 않습니다.</p>
+                        
+                        <a name="insurance-special-deduction"></a>
+                        <div class="explain detail">
+                            <h3>가. 보험료공제</h3>
+                            <p><strong>근로소득이 있는 거주자</strong>가 해당 과세기간에 ｢국민건강보험법｣, ｢고용보험법｣ 또는 ｢노인장기요양보험법｣에 따라 근로자 <strong>본인이 납부한 보험료</strong>를 납부한 과세기간 근로소득금액에서 공제합니다.</p>
+                            <table class="special-deduction">
+                                <thead>
+                                    <tr>
+                                        <th>구분</th>
+                                        <th>공제내용</th>
+                                        <th>공제한도</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>건강보험료, 고용보험료, 노인장기요양보험료</td>
+                                        <td>근로자 본인부담 보험료</td>
+                                        <td>전액</td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="jusuk">
+                                <ul>
+                                    <li>생명보험 등 보장성보험료는 보험료소득공제 대상이 아니고 보험료세액공제 항목이 별도로 있음</li>
+                                </ul>
+                            </div>
+                        </div>
+                                                
+                        <a name="house-special-deduction"></a>
+                        <div class="explain detail">
+                            <h3>나. 주택자금공제</h3>
+                            <p>주택자금공제는 <strong>근로소득이 있는 거주자</strong>가 원칙적으로 세대주에 해당하는 경우 공제대상이 되며, 근로자 본인이 직접 부담한 경우 공제대상이 됩니다.</p>
+                            <table class="special-deduction house">
+                                <thead>
+                                    <tr>
+                                        <th>구분</th>
+                                        <th>공제요건 및 공제액</th>
+                                        <th>공제한도</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td rowspan="2">ⓐ주택청약<br>종합저축</td>
+                                        <td>무주택 세대의 세대주가 근로자로서 총급여액이 7천만원이하인 경우, 해당연도 중 청약저축에 납입한 금액(연납입액 한도 240만원)의 40%</td>
+                                        <td rowspan="4">ⓐ+ⓑ합계액 연300만원한도</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul class="list-circle">
+                                                <div>[공제 신청시 제출서류]</div>
+                                                <li>주택청약저축납입증명서 (홈택스 연말정산간소화 자료로 갈음)</li>
+                                            </ul>
+                                        </td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2">ⓑ주택임차차입금 원리금상환액</td>
+                                        <td>과세기간 종료일 현재 무주택 세대의 세대주(세대주가 주택자금공제를 받지 아니한 경우에는 세대원)인 근로자로서 국민주택규모 주택을 임차하기 위한 주택임차차입금(임대차계약서상 입주일과 주민등록전입일 중 빠른 날로 부터 전후 3개월이내 차입금으로 차입금이 대출기관에서 임대인계좌로 직접입금될 것)이 있는 경우, 해당연도 차입금 원리금상환액의 40%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul class="list-circle">
+                                                <div>[공제 신청시 제출서류]</div>
+                                                <li>주택자금상환 등 증명서 (홈택스 연말정산간소화 자료)</li>
+                                                <li>주민등록등본</li>
+                                                <li>임대차계약서사본, 계좌이체 영수증 등 원리금상환증빙</li>
+                                            </ul>
+                                        </td>
+                                        
+                                    </tr>
+
+                                    <tr>
+                                        <td rowspan="3">ⓒ장기주택<br>저당차입금<br>이자상환액<br>공제</td>
+                                        <td>과세기간 종료일 현재 무주택이거나 1주택을 보유한 세대의 세대주(세대주가 주택자금공제를 받지 아니한 경우에는 세대원)인 근로자로서 기준시가 5억원 이하 주택(19.1.1.이후 차입분부터)을 취득하기 위해 그 주택에 저당권을 설정하고 금융기관으로부터 차입한 10년이상의 장기주택저당차입금(주택소유권 취득등기일로 부터 3월이내 차입)이 있는 경우, 해당연도 장기저당차입금 원리금상환액</td>
+                                        <td rowspan="3">ⓐ+ⓑ+ⓒ합계액 연300만원 ~ 1,800만원 한도</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>
+                                            <ul class="list-circle">
+                                                <div>[15.1.1. 이후 차입금 공제한도 설명]</div>
+                                                <li>15년이상 & 고정금리 &비거치식 : <b>1,800만원</b></li>
+                                                <li>15년이상 & (고정금리 or 비거치식) : <b>1,500만원</b></li>
+                                                <li>그 외 15년이상 : <b>500만원</b></li>
+                                                <li>10년이상 & (고정금리 or 비거치식) : <b>300만원</b></li>
+                                            </ul>
+                                        </td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul class="list-circle">
+                                                <div>[공제 신청시 제출서류]</div>
+                                                <li>금융회사 등이 발행하는 장기주택저당차입금이자상환증명서 (홈택스 연말정산간소화 자료)</li>
+                                                <li>주민등록등본</li>
+                                                <li>공동주택가격 확인서 등 기준시가를 확인할 수 있는 자료</li>
+                                            </ul>
+                                        </td>
+                                        
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="jusuk">
+                                <ul>
+                                    <li>주택청약종합저축 납입금액에 대하여 소득공제를 적용 받으려는 경우에는 소득공제를 적용받으려는 과세기간의 다음연도 2월말까지 저축 취급기관에 무주택확인서를 제출하여야 함</li>
+
+                                    <li>주택청약종합저축공제는 세대주만 가능하고 세대원은 공제대상이 아님</li>
+
+                                    <li>주택임차차입금 상환액공제를 세대주가 아닌 세대원이 받기 위해서는 ① 세대주가 주택청약저축공제(ⓐ), 주택임차차입금 공제(ⓑ), 장기주택저당차입금(ⓒ) 3가지 공제를 모두 받지 아니하고, ② 근로소득자인 세대원 본인명의로 임차계약을 하고, ③ 세대원 본인이 원리금상환을 해야 함</li>
+
+                                    <li>장기주택저당차입금 이자상환액공제를 세대주가 아닌 세대원이 받기 위해서는 ① 세대주가 주택청약저축공제(ⓐ), 주택임차차입금 공제(ⓑ), 장기주택저당차입금(ⓒ) 3가지 공제를 모두 받지 아니하고, ② 근로소득자인 세대원(=공제받고자 하는 자) 본인명의로 기준시가 5억원이하 주택을 취득하고, ③ 취득한 주택에 세대원이 실제거주하여야 하고, ④ 세대원 본인을 채무자로 주택취득 3개월이내 저당권을 설정한 장기주택저당차입금에 대하여 세대원 본인이 직접 원리금상환을 해야 함</li>
+
+                                    <li>즉, <b>소득공제받는 근로자 = 주택소유자 = 차입금 채무자</b>이여야 하고, <b>소득공제를 받는 근로자가 세대원인 경우 실제거주해야 함</b></li>
+
+                                    <li>장기주택저당차입금공제는 <b>①(1세대 1주택)</b> 세대 구성원이 보유한 주택을 포함하여 과세기간 종료일 현재 2주택 이상인 경우 소득공제를 적용하지 아니하고, <b>② (거주요건)</b>세대주에 대해서는 실제거주여부와 관계없이 적용하고, 세대원이 공제받는 경우는 실제거주하는 경우만 적용함</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <a name="other-deduction"></a>
+                    <section>
+                        <div class="blacktitle">                    
+                            <p>5. 그 밖의 소득공제</p>
+                        </div>
+
+                        <p class="explain"> 그 밖의 소득공제에는 <b>개인연금저축</b>(2000.12.31. 이전 가입, 그 이후 가입자는 연금저축 세액공제항목을 적용해야 함), <b>소기업⋅소상공인 공제부금공제(노란우산공제)</b>, <b>신용카드등 사용금액 공제</b>, 중소기업창업투자조합 출자 등 소득공제, 우리사주출연금 소득공제, 고용유지중소기업 근로자 소득공제, 장기집합투자증권 저축 소득공제 등이 있습니다.</p>
+
+                        <table class="other-deduction">
+                            <thead>
+                                <tr>
+                                    <th>구분</th>
+                                    <th>공제내용 설명</th>
+                                    <th>공제한도</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>개인연금저축</td>
+                                    <td>거주자가 본인명의로 2000.12.31. 까지 가입한 개인연금저축 당해연도 납입액의 40%</td>
+                                    <td>연 72만원</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">소기업 소상공인 공제부금</td>
+                                    <td>거주자가 본인명의로 가입한 소기업 소상공인 공제부금(노란우산공제)로서 매분기별 300만원 이하 공제부금 불입하는 경우, 당해연도 불입액 중 공제한도내 금액</td>
+                                    <td rowspan="2">200만원 ~ 500만원</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                    
+                                        <ul class="list-circle">
+                                            <div>[공제한도 : 사업(근로)소득금액 구간별 한도]</div>
+                                            <li>4천만원 이하 : <b>500만원</b></li>
+                                            <li>4천만원 초과 ~ 1억원 이하 : <b>300만원</b></li>
+                                            <li>1억원 초과 : <b>200만원</b></li>
+                                        </ul>    
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td rowspan="2">신용카드 등 사용금액</td>
+                                    <td>근로자 본인 및 연간소득금액 100만원이하인 배우자 또는 근로자와 생계를 같이 하는 직계존비속(연령제한 없으나, 소득제한 있음) 명의 신용카드, 직불카드, 선불카드, 현금영수증 사용액 합계액중 총급여액 25%를 초과하는 금액의 15%(신용카드), 30%(현금영수증, 직불선불카드),40%(전통시장,대중교통)를 소득공제</td>
+                                    <td rowspan="2">총급여 20%와 300만원+@ 중 적은금액</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                    
+                                        <ul class="list-circle">
+                                            <div>[공제한도: 총급여구간별]</div>
+                                            <li>7천만원 이하 : <b>300만원</b>과 총급여20%중 적은 금액</li>
+                                            <li>7천만원 초과 ~ 1.2억원 이하 : <b>250만원</b></li>
+                                            <li>1.2억원 초과 : <b>200만원</b></li>
+                                            
+                                            <div>[추가한도 : 아래 각각합산금액]</div>
+                                            <li>전통시장금액 40%와 100백만원 중 적은금액</li>
+                                            <li>대중교통금액 40%와 100백만원 중 적은금액</li>
+                                            <li>21년도 사용증가분 소득공제액과 100백만원 중 적은금액</li>
+                                        </ul>    
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="jusuk">
+                            <ul>
+                                <li>신용카드 공제는 연령제한으로 소득공제대상이 되지 않는 생계를 같이 하는 직계존비속(예를 들어, 대학생인 자녀)이 사용하는 금액을 포함하되, 다른 거주자의 기본공제를 받는 경우를 제외함</li>
+                                <li>또한, 형제자매의 신용카드 사용금액은 기본공제대상자라고 하더라도 공제대상이 아님</li>
+                                <li>신용카드 등 사용금액에서 사업관련비용, 자동차구입비용, 자동차리스료, 보험료, 초등학생 이상의 학원비, 공과금, 기부금은 제외됨</li>
+                                <li>신용카드공제와 의료비공제, 취학전 아동에 대한 학원비에 대한 교육비공제, 교복구입에 대한 교육비공제는 중복공제 가능함</li>
+                                <li>신용카드로 기부금을 납부하는 경우는 신용카드 공제가 불가능하므로 기부금 세액공제를 신청하여야 함</li>
+                            </ul>
+                        </div>
+                        <table class="other-deduction2">
+                            <thead>
+                                <tr>
+                                    <th>구분</th>
+                                    <th>공제내용 설명</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="2">벤처투자조합 출자 등</td>
+                                    <td>
+                                        <ul>
+                                            <li>
+                                                거주자가 중소기업 벤처투자조합 등 출자하는 경우 2022.12.31. 까지 출자한 금액의 10% 공제
+                                            </li>
+                                            <br>
+                                            <li>
+                                                벤처기업에 직접투자하는 경우에는, 투자금액기준으로 
+                                                <ul class="list-disc">
+                                                    <li>
+                                                        투자금액중 3천만원 이하 : 100% 공제
+                                                    </li>
+                                                    <li>3천만원 초과 ~ 5천만원이하 : 70% 공제</li>
+                                                    <li>5천만원 초과분 : 30% 공제</li>
+                                                </ul>
+                                                
+                                            </li>
+                                        </ul>
+                                        </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                    
+                                        <ul class="list-circle">
+                                            <div>[공제한도]</div>
+                                            <li>종합소득금액의 50%</li>
+                                            <li>벤처기업투자신탁의 경우에는 300만원</li>
+                                        </ul>    
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2"> 우리사주조합출연금</td>
+                                    <td>우리사주조합원이 우리사주를 취득하기 위하여 우리사주조합에 출자하는 경우, 해당연도 우리사주조합 출연금액</td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td>
+                                    
+                                        <ul class="list-circle">
+                                            <div>[공제한도]</div>
+                                            <li>연 400만원</li>
+                                            <li>벤처기업 우리사주조합원의 경우 1,500만원</li>
+                                        </ul>    
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>고용유지중소기업 근로자 소득공제</td>
+                                    <td> 고용유지 중소기업에서 근무하는 상시근로자로서, <b>전년대비 임금삭감액의 50% 소득공제 (1천만원 한도)</b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>장기집합투자증권저축</td>
+                                    <td>근로소득이 있는 거주자(가입당시 직전과세기간 총급여 5천만원이하)가 2015.12.31. 까지 가입한 장기집합투자증권저축이 있는 경우, 가입한 날로 부터 10년동안 각 과세기간 납입금액 40%를 공제 (240만원 한도)</b>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <section>
+                        <div class="blacktitle">                    
+                            <p>6. 소득세 소득공제 종합한도 (2,500만원)</p>
+                        </div>
+
+                        <p class="explain"> 거주자의 종합소득금액을 계산할 때 <strong>아래 소득공제액                            합계액이 2,500만원을 초과</strong>하는 경우에는 <strong>그 초과하는 금액은 없는 것</strong>으로 합니다.</p>
+
+                        <ul class="jusuk-box">
+                            <li>주택자금공제</li>
+                            <li>신용카드 등 사용금액 공제</li>
+                            <li>소기업⋅소상공인 공제부금 소득공제(노란우산공제)</li>
+                            <li>벤처투자조합 출자공제</li>
+                            <li>우리사주조합 출자공제</li>
+                            <li>장기집합투자증권저축 소득공제</li>
+                        </ul>
+                    </section>
+                </article>    
+
+                <!-- 3page -->
+                <br><br>
+                <div class="content-part">
+                    <h1 class="maintitle">산출세액 &middot; 세액공제감면</h1>
+                </div>
+                <article class="content-part">
+
+                    <h2 class="subtitle" style="margin-top: 1.5em;">산출세액</h2>
+                    <p class="explain"> 산출세액은 과세표준에서 아래 세율표상 세율을 곱하여 계산합니다.</p>
+                    <a name="tax-rate"></a>
+                    <section>
+                      <div class="blacktitle">                    
+                          <p>종합소득 세율표</p>
+                      </div>
+                      <table>
+                          <thead>
+                              <tr>
+                              <th>과세표준</th>
+                              <th>기본세율 및 산출세액</th>
+                              </tr> 
+                          </thead>
+                          <tbody>
+                              <tr>
+                              <td>1,200만원 이하</td>
+                              <td>과세표준 × 6%</td>
+                              </tr>
+                              <tr>
+                              <td>1,200만원 초과 <br> 4,600만원 이하</td>
+                              <td>과세표준 × 15% - 108만원</td>
+                              </tr>
+                              <tr>
+                              <td>4,600만원 초과 <br> 8,800만원 이하</td>
+                              <td>과세표준 × 24% - 522만원</td>
+                              </tr>
+                              <tr>
+                              <td>8,800만원 초과 <br> 1.5억원 이하</td>
+                              <td>과세표준 × 35% - 1,490만원</td>
+                              </tr>
+                              <tr>
+                              <td>1.5억만원 초과 <br> 3억원 이하</td>
+                              <td>과세표준 × 38% - 1,940만원</td>
+                              </tr>
+                              <tr>
+                              <td>3억원 초과 <br> 5억원 이하</td>
+                              <td>과세표준 × 40% - 2,540만원</td>
+                              </tr>
+                              <tr>
+                              <td>5억원 초과 <br> 10억원 이하</td>
+                              <td>과세표준 × 42% - 3,540만원</td>
+                              </tr>
+                              <tr>
+                              <td>10억원 초과</td>
+                              <td>과세표준 × 45% - 6,540만원</td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </section>
+                  
+              </article>
+  
+              <a name="tax-reduction"></a>
+              <article class="content-part">
+                  <h2 class="subtitle">세액감면</h2>
+                  <p class="explain">세액감면은 소득세법에 따른 정부간 협약된 우리나라 파견된 외국인급여 감면, 조세조약에 따른 원어민교사 세액감면, 조세특례제한법에 따른 세액감면인 중소기업 취업자에 대한 소득세 감면 등이 있습니다.</p>                 
+  
+                  <section>
+                      <div class="blacktitle">                    
+                          <p>1. 조세조약 세액감면 (원어민 교사)</p>
+                      </div>
+  
+                      <p class="explain"> 원어민 교사의 근로소득은 일반적으로 거주자인 내국인과 동일하게 과세되나, 조세조약상 교사⋅교수조항의 면세 요건을 충족하면 일정 기간(주로 2년, 중국은 3년) 동안 우리나라에서 발생된 근로소득에 대하여 면세혜택을 받을 수 있습니다.</p>
+  
+                      <ul class="jusuk-box">
+                          <div>[영어권 해당국가]</div>
+                          <li>미국, 영국, 남아프리카공화국, 뉴질랜드, 호주, 아일랜드</li>
+  
+                          <div>[면세혜택]</div>
+                          <li>19% 단일세율을 적용하거나,</li>
+                          <li>거주자와 동일하게 산출세액계산후 100%세액감면적용</li>
+  
+                          <div>[비과세⋅면제신청서 첨부서류]</div>
+                          <li>거주자증명서</li>
+                          <li>학교와의 고용계약서 사본</li>
+                          <li>기타 비과세⋅면제 근거규정 및 서류 </li>
+                      </ul>
+                  </section>
+                  
+                  <a name="smallcompany-tax-reduction"></a>
+                  <section>
+                      <div class="blacktitle">                    
+                          <p>2. 중소기업 취업자 소득세 감면(조특법 §30)</p>
+                      </div>
+  
+                      <p>중소기업 취득자 소득세 감면제도는 <strong>청년, 고령자, 장애인, 경력단절 여성의 중소기업 취업을 지원</strong>하기 위해, <b>중소기업 취업일로 부터 3년(청년은 5년)</b>이 되는 날이 속하는 달까지 발생하는 근로소득에 대하여 <b>소득세의 70%(청년은 90%)를 감면(한도 150만원)</b>합니다.</p>
+  
+                      <ul class="jusuk-box">
+                          <p>[감면대상 근로자(외국인포함)]</p>
+                          <li><b>청년</b> : 근로계약 체결일 현재 연령 15세~34세(병역을 이행한 경우 병역기간-6년한도-차감)</li>
+                          <li><b>고령자</b> : 근로계약체결일 현재 연령 60세이상</li>
+                          <li><b>장애인</b></li>
+                          <li><b>경력단절여성</b> : 아래요건 모두충족하는 여성</li>
+                          <ul class="list-circle padding">
+                              <li>해당 중소기업 또는 동종기업 1년이상 근무</li>
+                              <li>결혼, 임신, 출산, 육아, 자녀교육의 사유로 퇴사</li>
+                              <li>동종 업종에서 퇴직한 지  3년 이상 15년 미만 경과</li>
+                              <li>해당 중소기업의 최대주주(개인사업자는 대표자)나 그 특수관계인이 아닐 것</li>
+                          </ul>
+                          
+                          <p>[감면신청]</p>
+                          <li><b>근로자</b> : ‘중소기업 취업자 소득세 감면신청서’를 취업일이 속하는 달의 다음 달 말일까지 원천징수의무자에게 제출 (퇴사자는 주소지 관할 세무서장에게 감면신청)</li>
+                          <li><b>원천징수의무자</b> : 근로자의 명단을 신청을 받은 날의 다음 달 10일까지 원천징수 관할 세무서장에게 ‘중소기업 취업자 소득세 감면 대상명세서’를 제출</li>
+  
+                          <p>[감면세액 계산]</p>
+                          <li><b>ⓐ감면세액</b> : 산출세액 × (근로소득금액÷종합소득금액)×(감면대상 중소기업체 급여 ÷ 해당근로자 총급여) × 감면율(청년 90%, 그 외 70%)</li>
+                          <li><b>ⓑ근로소득세액공제 재계산</b> : 근로소득세액공제×(1 - 감면세액(ⓐ)÷산출세액)</li>
+  
+                          <p>[감면한도]</p>
+                          <li><b>연 150만원</b></li>
+                      </ul>
+                  </section>
+                  <section>
+                      <div class="blacktitle">                    
+                          <p>3. 그 밖의 조세특례제한법 상 소득세 감면</p>
+                      </div>
+                      <p class="explain"> 중소기업 취업자 소득세감면 외 외국인 기술자 소득세감면, 성과공유 중소기업이 지급하는 경영성과급 세액감면, 내국인 우수인력 국내복귀 소득세 감면 등 있습니다. </p>
+  
+                      <table class="other-deduction">
+                          <thead>
+                              <tr>
+                                  <th>구분</th>
+                                  <th>공제내용 설명</th>
+                                  
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>외국인 기술자에 대한 소득세감면<br>(조특법 §18)</td>
+                                  <td>
+                                      <ul class="list-disc">
+                                          <li>외국인기술자가 국내에서 내국인에게 근로를 제공하고 받는 근로소득으로써 그 외국인기술자가 국내에서 최초로 근로를 제공한 날(2021.12.31. 이전인 경우만 해당)부터 5년이 되는 날이 속하는 달까지 근로소득에 대해서는 소득세의 50% 상당액 감면</li>
+                                          <li>외국인기술자 중 소재⋅부품⋅장비산업 특화선도기업등에서 근무하는 경우에는 국내에서 최초로 근로를 제공한 날(2022년 12월 31일 이전인 경우만 해당)부터 3년이 되는 날이 속하는 달까지  근로소득 소득세 70% 감면하고, 그 다음 2년이 되는 날이 속하는 달까지 50% 세액감면</li>
+                                      </ul>
+                                  </td>
+                                  
+                              </tr>
+                              <tr>
+                                  <td>성과공유 중소기업 경영성과급 세액감면<br>(조특법 §19)</td>
+                                  <td>영업이익이 발생하는 성과공유 중소기업이 근로자(총급여 7천만원 이하인 직원)가 중소기업으로 부터 2021.12.31.까지 경영성과급을 받는 경우, 그 성과급에 대한 소득세 50% 세액감면
+                                  </td>
+                                  
+                              </tr>
+                              <tr>
+                                  <td>내국인 우수인력 국내복귀 소득세 감면<br>(조특법 §18의3)</td>
+                                  <td>학위 취득 후 국외에서 5년 이상 거주하면서 연구개발 및 기술개발 경험을 가진 내국인 우수 인력이 국내에 거주하면서 연구기관 등에 취업하여 받는 근로소득으로서 취업일(2022.12.31. 이전인 경우만 해당)부터 5년이 되는 날이 속하는 달까지 발생한 근로소득에 대한 소득세 50% 세액감면
+                                  </td>
+                                  
+                              </tr>
+                             
+                          </tbody>
+                      </table>
+                  </section>
+              </article>
+  
+              <a name="tax-credit"></a>
+              <article class="content-part">
+                  <h2 class="subtitle">세액공제</h2>
+                  <p class="explain">세액공제는 근로소득산출세액에서 일정율을 공제하는 근로소득세액공제, 자녀세액공제, 특별세액공제 등이 있습니다.</p>                 
+                  
+                  <a name="wage-tax-credit"></a>
+                  <section>
+                      <div class="blacktitle">                    
+                          <p>1. 근로소득세액공제</p>
+                      </div>
+  
+                      <p class="explain"> 근로소득이 있는 거주자에 대해서는 그 근로소득에 대한 종합소득 산출세액에서 아래 표에 따른 근로소득세액공제 금액을 차감합니다.</p>
+  
+                      <ul class="jusuk">
+                      </ul>
+                
+                      <h4> 가. 세액공제금액</h4>
+                      <table class="salary-credit">
+                          <thead>
+                              <tr>
+                                  <th>산출세액</th>
+                                  <th>세액공제금액</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>130만원 이하</td>
+                                  <td>산출세액 × 55% </td>
+                              </tr>
+                              <tr>
+                                  <td>130만원 초과</td>
+                                  <td>71만 5천원 + 130만원 초과 산출세액 × 55% </td>
+                              </tr>
+                              
+                             
+                          </tbody>
+                      </table>
+  
+                      <h4> 나. 세액공제한도</h4>
+                      <table class="salary-credit">
+                          <thead>
+                              <tr>
+                                  <th>총급여액</th>
+                                  <th>세액공제금액 한도액</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>3,300만원 이하</td>
+                                  <td>74만원</td>
+                              </tr>
+                              <tr>
+                                  <td>3,300만원 초과<br> 7천만원 이하</td>
+                                  <td>
+                                      <ul class="list-disc">
+                                          <p><b>[①과 ②중 큰금액]</b></p>
+                                          <li>①74만원 - [(총급여 - 3,300만원) × 0.8%]</li>
+                                          <li>②66만원</li>
+                                      </ul>
+                                       </td>
+                              </tr>
+                              <tr>
+                                  <td>7천만원 초과</td>
+                                  <td>
+                                      <ul class="list-disc">
+                                          <p><b>[①과 ②중 큰금액]</b></p>
+                                          <li>①66만원 - [(총급여 - 7천만원) × 50%]</li>
+                                          <li>②50만원</li>
+                                      </ul>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td colspan="3">
+                                      <div><b>[중소기업취업자 소득세감면 받은 경우]</b></div>
+                                      <div>근로소득세액공제×<b>(1 - 감면세액÷산출세액)</b></div>
+                                  </td>
+  
+                              </tr>
+                          </tbody>
+                      </table>
+                      
+                      
+                  </section>
+  
+                  <a name="children-tax-credit"></a>
+                  <section>
+                      <div class="blacktitle">                    
+                          <p>2. 자녀세액공제</p>
+                      </div>
+  
+                      <p class="explain"> 종합소득이 있는 거주자의 기본공제대상자인 7세이상의 자녀수에 따른 자녀세액공제와 해당과세기간 출산입양자녀에 대한 세액공제가 있습니다.</p>
+  
+                      <ul class="jusuk">
+                      </ul>
+                
+                      <table class="child-credit">
+                          <thead>
+                              <tr>
+                                  <th colspan="2">구 분</th>
+                                  <th>세액공제금액</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td rowspan="3">7세이상<br>자녀수</td>
+                                  <td style="text-align: center;">1명</td>
+                                  <td style="text-align: left; padding-left: 0.3em;">연 15만원 </td>
+                              </tr>
+                              <tr>
+                                  <td>2명</td>
+                                  <td>연 30만원 </td>
+                              </tr>
+                              <tr>
+                                  <td>3명 이상</td>
+                                  <td>연 30만원 + (자녀수 - 2) × 30만원 </td>
+                              </tr>
+                              <tr>
+                                  <td colspan="2">당해연도 출산⋅입양</td>
+                                  <td>첫째 30만원, 둘째 50만원, 셋째이상 70만원</td>
+                              </tr>
+                          </tbody>
+                      </table>
+  
+                      <ul class="jusuk">
+                          <li>종합소득이 있는 거주자의 기본공제대상자인 손자⋅손녀는 자녀세액공제 대상 자녀에 해당하지 아니하는 것임 </li>
+                      </ul>
+                      
+                      
+                  </section>
+  
+                  <a name="pension-tax-credit"></a>
+                  <section>
+                      <div class="blacktitle">                    
+                          <p>3. 연금계좌세액공제</p>
+                      </div>
+  
+                      <p class="explain"> 종합소득이 있는 거주자가 연금저축, 퇴직연금 납입액이 있는 경우 해당연도 납입액과 아래 공제금액 한도내 금액 중 적은금액의 12%(총급여 55백만원 이하자는 15%)를 세액공제합니다.</p>
+               
+                      
+                      <ul class="jusuk-box"> 나중에 연금저축을 해약하는 경우, 연금저축 세액공제를 적용받은 부분에 대한 일시 수령금액의 15%를 기타소득세로 납부해야 하는 불이익이 있으므로 세액공제액이 산출세액을 초과하는 경우, 초과금액만큼은 연금저축공제를 받지 않도록 해야 합니다.</ul>
+  
+                      <table class="pension-credit">
+                          <thead>
+                              <tr>
+                                  <th>총급여<br>(종합소득금액)</th>
+                                  <th>구분</th>
+                                  <th>50세미만<br>공제한도</th>
+                                  <th>50세이상<br>공제한도</th>
+                                  <th>공제율</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td rowspan="2">5.5천만원<br>(4천만원)이하</td>
+                                  <td>연금저축</td>
+                                  <td>400만원</td>
+                                  <td>600만원</td>
+                                  <td>15%</td>
+                              </tr>
+                              <tr>
+                                  <td>연금저축+<br>퇴직연금</td>
+                                  <td>700만원</td>
+                                  <td>900만원</td>
+                                  <td>15%</td>
+                              </tr>
+                              <tr>
+                                  <td rowspan="2">1.2억원<br>(1억원)이하</td>
+                                  <td>연금저축</td>
+                                  <td>400만원</td>
+                                  <td>600만원</td>
+                                  <td>12%</td>
+                              </tr>
+                              <tr>
+                                  <td>연금저축+<br>퇴직연금</td>
+                                  <td>700만원</td>
+                                  <td>900만원</td>
+                                  <td>12%</td>
+                              </tr>
+                              <tr>
+                                  <td rowspan="2">1.2억원<br>(1억원)초과</td>
+                                  <td>연금저축</td>
+                                  <td>300만원</td>
+                                  <td>300만원</td>
+                                  <td>12%</td>
+                              </tr>
+                              <tr>
+                                  <td>연금저축+<br>퇴직연금</td>
+                                  <td>700만원</td>
+                                  <td>700만원</td>
+                                  <td>12%</td>
+                              </tr>
+                          </tbody>
+                      </table>
+  
+                      <ul class="jusuk">
+                          <li>개인종합자산관리계좌(ISA) 만기시 연금계좌 전환금액의 10%(300만원 한도)의 12%(총급여 55백만원 이하는 15%)추가 세액공제 </li>
+                      </ul>
+                  </section>
+  
+                  <a name="special-tax-credit"></a>
+                  <section>
+                      <div class="blacktitle">                    
+                          <p>4. 특별세액공제</p>
+                      </div>
+  
+                      <p class="explain"> 근로소득이 있는 거주자는 보장성보험료, 의료비, 교육비, 기부금에 대한 특별세액공제를 적용할 수 있습니다.</p>
+               
+                      <ul class="jusuk">
+                          <li> <b>(표준세액공제)</b>근로소득자로서 ⓐ특별소득공제, ⓑ특별세액공제, ⓒ월세액 세액공제를 신청하지 않은 경우 연 13만원을 종합소득산출세액에서 공제할 수 있으므로, </li>
+                          <li>각 항목별 공제액합계가 표준세액공제를 적용한 것보다 적다면, 표준세액공제 13만원을 선택할 수 있습니다.</li>
+                      </ul>
+  
+                      <a name="insurance-tax-credit"></a>
+                      <div class="explain detail">
+                          <h4>가. 보험료 세액공제</h4>
+                          <p class="explain">근로소득자가 해당 과세기간에 보장성보험료(부양가족 보험료포함)를 지출하는 경우, 그 금액(납입액 100만원 한도)의 12%(장애인 전용 보장성보험 15%)에 해당하는 금액을 세액공제합니다.</p>
+      
+                          <p class="explain">예를들어 생명보험 300만원을 납입한 경우, 100만원의 12%인 12만원을 세액공제 받을 수 있습니다.</p>
+                          <table class="pension-credit">
+                              <thead>
+                                  <tr>
+                                      <th>구 분</th>
+                                      <th>납입액 한도</th>
+                                      <th>세액공제율</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr>
+                                      <td>보장성보험</td>
+                                      <td>100만원</td>
+                                      <td>12%</td>
+                                  </tr>
+                                  <tr>
+                                      <td>장애인전용<br>보장성보험</td>
+                                      <td>100만원</td>
+                                      <td>15%</td>
+                                  </tr>
+                                
+                              </tbody>
+                          </table>
+      
+                          <ul class="jusuk">
+                              <li>기본공제대상자에 해당하지 아니하는 만20세를 초과하거나, 연간 소득금액이 100만원을 초과하는 부양가족을 피보험자(수익자)로 하여 보장성보험계약을 체결하고 납입한 보험료는 공제대상이 아님</li>
+                              <li>기본공제대상인 부양가족의 명의로 계약한 경우에도 당해 근로자가 보험료를 실제로 납입한 경우에는 공제대상임</li>
+                              <li>맞벌이 부부인 근로자 본인(남편)이 계약자이고 피보험자가 부부공동인 보장성보험의 보험료는 근로자 본인(남편) 연말정산시 보험료공제 대상에 해당</li>
+                              
+                          </ul>
+      
+                      </div>
+                      
+                      <a name="treatment-tax-credit"></a>
+                      <div class="explain detail">
+                          <h4>나. 의료비 세액공제</h4>
+                          <p class="explain">근로소득자가 해당 과세기간에 본인 및 기본공제대상자(나이 및 소득금액 제한이 없음)를 위한 의료비, 의약품, 안경 구입비(50만원 이내), 산후조리원비용(총급여 7천만원 이하자로 출산 1회당 200만원 이내) 등 의료비가 있는 경우에, 총급여의 3%를 초과하는 금액(공제한도액 아래표 참고)의 15%(난임시술비는 20%)를 세액공제합니다.</p>
+  
+                          <p class="explain">다만, 미용⋅성형수술을 위한 비용 및 건강증진을 위한 의약품 구입비용은 공제대상의료비에서 제외하고 있습니다.</p>
+  
+                          <ul class="jusuk-box">
+                              <p>[공제대상 의료비]</p>
+                              <li>진찰⋅치료⋅질병예방을 위하여 의료기관(종합병원⋅병원⋅치과병원⋅한방병원⋅요양병원⋅의원⋅치과의원⋅한의원 및 조산원)에 지급한 비용</li>
+                              <li>치료⋅요양을 위한 의약품(한약 포함)을 구입하고 지급하는 비용</li>
+                              <li>장애인보장구(｢조특령｣ 제105조의 규정에 의한 보장구)를 직접 구입 또는 임차하기 위하여 지출한 비용</li>
+                              <li>의사⋅치과의사⋅한의사 등의 처방에 따라 의료기기를 직접 구입 또는 임차하기 위하여 지출한 비용</li>
+                              <li>시력보정용 안경 또는 콘택트렌즈 구입을 위하여 지출한 비용 기본공제대상자 1명당 연 50만원 이내의 금액</li>
+                              <li>보청기 구입을 위하여 지출한 비용</li>
+                              <li>｢노인장기요양보험법｣ 제40조 따른 장기요양급여에 대한 비용으로서 실제 지출한 본인 일부 부담금</li>
+                              <li>해당 과세기간 총급여액이 7천만원 이하인 근로자가 산후조리원에 산후조리 및 요양의 대가로 지급하는 비용으로서 출산 1회당 200만원 이내의 금액</li>
+                              
+                          </ul>
+                          <table class="pension-credit">
+                              <thead>
+                                  <tr>
+                                      <th>구 분</th>
+                                      <th>공제금액 한도</th>
+                                      <th>세액공제율</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr>
+                                      <td>난임시술비</td>
+                                      <td>한도 없음</td>
+                                      <td>20%</td>
+                                  </tr>
+                                  <tr>
+                                      <td>본인, 65세이상, 장애인, 건강보험 산정특례 대상자</td>
+                                      <td>한도 없음</td>
+                                      <td>15%</td>
+                                  </tr>
+                                  <tr>
+                                      <td>그 외 부양가족</td>
+                                      <td>연 700만원</td>
+                                      <td>15%</td>
+                                  </tr>
+                                  <tr>
+                                      <td colspan="3">
+                                          <ul class="list-circle" style="text-align: left;">
+                                              <div>[지출항목별 공제신청 제출서류]</div>
+                                              <li><b>진찰,진료,질병예방 의료비</b> : 의료비영수증</li>
+                                              <li><b>노인장기요양급여 실제 지출한 본인부담금</b> : 장기요양급여비용 납부확인서</li>
+                                              <li><b>안경, 콘택트렌즈 구입비</b>(50만원) : 안경사가 사용자 성명 및 시력교정용임을 확인한 영수증</li>
+                                              <li><b>보청기, 장애인보장구</b> : 판매자가 사용자 성명을 확인한 영수증</li>
+                                              <li><b>의료기기 구입(임차)비용</b> : 의사의 처방전과 판매자(임대인)이 발행한 의료기기명이 기재된 의료비영수증</li>
+                                              <li><b>산후조리비용</b>(출산 1회당 200만원) : 해당 산후조리원에서 이용자 성명, 이용대가를 확인하는 영수증</li>
+                                          </ul>
+                                      </td>
+                                  </tr>
+                              </tbody>
+                          </table>
+  
+  
+                      
+                          <ul class="jusuk">
+                              <li>의료비 지출금액이 총급여액의 3%를 초과하지 않으면 세액공제액은 없음</li>
+                              <li>총급여 3%초과금액 있을 때, 초과된 금액을 대상으로 위 구분별 한도액을 계산하고 공제율 12(15)%를 적용하여 세액공제액 계산</li>
+                              <li>따라서, 총급여 3% 차감시 공제한도가 있는 항목부터 차감하여 항목별 금액을 계산하면 됨</li>
+                              <li>의료비 공제대상 기본공제대상자는 나이와 소득금액제한이 없으므로, 소득금액 100만원(근로소득만 있는 자는 총급여 500만원)을 초과하여 기본공제를 못 받은 배우자를 위해 지출한 의료비도 근로자 본인이 지출한 의료비이라면 세액공제 가능함</li>
+                              <li>맞벌이 부부의 경우 자녀 의료비는 자녀에 대한 기본공제를 받은 자가 지출한 것만 공제 가능(다른 자가 기본공제를 적용받은 부양가족을 위해 본인이 직접 지출한 의료비라도 공제대상 아님)</li>
+                          </ul>
+                      </div>
+  
+                      <a name="education-tax-credit"></a>
+                      <div class="explain detail">
+                          <h4>다. 교육비 세액공제</h4>
+                          <p class="explain">근로소득자가 해당 과세기간에 본인 및 기본공제대상자(나이 제한이 없으나 소득제한 있음)를 위한 교육비(수업료, 미취학아동 학원비 등)은 아래 공제한도 범위내 금액의 15%를 세액공제합니다.</p>
+      
+                          <ul class="jusuk-box">
+                              <p>공제대상 교육비</p>
+                              <li>수업료⋅입학금⋅보육비용⋅수강료 및 그 밖의 공납금</li>
+                              <li>학교에서 구입한 교과서대금(초⋅중⋅고등학교 학생만)</li>
+                              <li>교복(체육복 포함)구입비용(중⋅고등학교의 학생만, 학생 1명당 연 50만원 한도)</li>
+                              <li>학교 등에서 실시하는 방과후 학교나 방과후 과정 등의 수업료 및 특별활동비(학교 등에서 구입한 도서구입비와 학교 외에서 구입한 초⋅중⋅고등학교의 방과후 학교 수업용 도서의 구입비를 포함)</li>
+                              <li>｢초⋅중등교육법｣ 제2조에 따른 학교에서 교육과정으로 실시하는 현장체험학습 비용(학생 1명당 연 30만원 한도)</li>
+                              <li>초등학교 취학전 아동(입학연도 1월~2월 포함)을 위하여 ｢영유아보육법｣에 따른 어린이집, ｢학원의 설립⋅운영 및 과외교습에 관한 법률｣에 따른 학원 또는 체육시설에 지급한 교육비</li>
+                              <li>기본공제대상자인 장애인(소득 제한을 받지 않음)의 재활교육을 위하여 지급하는 비용(직계존속 포함)으로, 장애인의 재활교육을 위하여 사회복지시설 및 비영리법인에 지출한 비용(외국에 있는 시설 또는 법인에 지출한 것도 해당), 과세기간 종료일 현재 18세 미만인 기본공제대상 장애인의 기능향상과 행동발달을 위한 발달재활서비스제공기관에 지출한 비용</li>
+                              
+                              
+                          </ul>
+                          <table class="education-credit">
+                              <thead>
+                                  <tr>
+                                      <th>구 분</th>
+                                      <th>공제금액 한도</th>
+                                      <th>세액<br>공제율</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr>
+                                      <td>본인 교육비</td>
+                                      <td>전액(대학원 학비, 직업능력개발훈련시설 수강료 포함)</td>
+                                      <td>15%</td>
+                                  </tr>
+                                  <tr>
+                                      <td>기본공제대상(나이제한 없음)인 배우자, 직계비속, 형제자매, 입양자</td>
+                                      <td>
+                                          <ul class="list-disc">
+                                              <li>고등학교이하 : 1인당 3백만원</li>
+                                              <li>대학생 : 1인당 9백만원</li>
+                                              <li>대학원생 : 공제대상아님</li>
+                                          </ul>
+                                      </td>
+                                      <td>15%</td>
+                                  </tr>
+                                  <tr>
+                                      <td>장애인 특수교육비(직계존속 포함)</td>
+                                      <td>전액</td>
+                                      <td>15%</td>
+                                  </tr>
+                                  <tr>
+                                      <td colspan="3">
+                                          <ul class="list-circle" style="text-align: left;">
+                                              <div>[공제신청 제출서류]</div>
+                                              <li>교육비 납입증명서</li>  
+                                              <li>학교 외에서 구입한 초⋅중⋅고등학교의 방과후 학교 수업용 도서는 학교장의 확인을 받은 ‘방과후 학교 수업용 도서 구입 증명서’를 별도로 제출</li>
+                                              <li>국외교육비의 경우 국외교육비공제 적용 대상자임을 입증할 수 있는 서류 첨부</li>
+                                          </ul>
+                                      </td>
+                                  </tr>
+                              </tbody>
+                          </table>
+      
+                          <ul class="jusuk">
+                              <li>｢한국장학재단 설립 등에 관한 법률｣ 등에 따른 학자금 대출(등록금에 대한 대출)의 원리금 상환에 지출한 금액은 교육비 세액공제 대상에 해당함</li>
+                              <li>해당 과세기간에 지급한 교육비 중에 장학금 학자금을 받은 경우 동 금액을 뺀 금액이 교육비 공제대상 금액임</li>
+                              <li>직계존속에 대한 교육비는 공제대상 아님(단, 직계존속에 대한 장애인 특수교육비는 공제대상)</li>
+                              <li>취학전 아동 학원비는 교육비 공제대상이 되나, 초등학생 이상 자녀의 학원⋅체육시설 수강료는 공제 대상이 아님</li>
+                              <li>국외교육기관에 해당되지 아니하는 외국의 대학부설 어학연수과정에 대한 수업료는 교육비 공제대상에 해당하지 아니함</li>
+                              <li>고등학교 재학 중에 특차모집에 합격하여 납부한 대학 등록금은 대학생이 된 연도의 근로소득에서 교육비공제 가능</li>
+                          </ul>
+      
+                      </div>
+                      
+                      <a name="charity-tax-credit"></a>
+                      <div class="explain detail">
+                          <h4>라. 기부금 세액공제</h4>
+                          <p class="explain">거주자 및 기본공제대상(나이 제한없음)자가 해당 과세기간에 지출한 공제한도 내의 기부금의 20%(1천만원 초과분 35%, 정치자금기부금은 3천만원 초과분 25%)를 세액공제합니다.</p>
+  
+                          <table class="charity-credit">
+                              <thead>
+                                  <tr>
+                                      <th>구 분</th>
+                                      <th>공제금액 한도</th>
+                                      <th>세액<br>공제율</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr>
+                                      <td>①정치자금기부금</td>
+                                      <td>근로소득금액 × 100%</td>
+                                      <td>
+                                          <ul class="list-disc">
+                                              <li>10만원이하: 100/110</li>
+                                              <li>10만원 초과：15%
+                                              <br>(3천만원 초과분 25%)</br>
+                                          </ul>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>②법정기부금<br>(소득세법 제34조 제2항 제1호)</td>
+                                      <td>(근로소득금액 - ①) × 100%</td>
+                                      <td rowspan="4" style="text-align: center;">20%<br>(기부금 합계 <br>1천만원 초과분<br>35%)</td>
+                                  </tr>
+                                  <tr>
+                                      <td>③우리사주조합기부금<br>(조특법 제88조의4 제13항)</td>
+                                      <td>(근로소득금액－①－②)×30%</td>
+                                      
+                                  </tr>
+                                  <tr>
+                                      <td>④지정기부금<br>(종교단체기부금 있는 경우)<br>(소법 제34조 제3항 제1호)</td>
+                                      <td><ul class="list-disc">
+                                          <div><b>아래합계(ⓐ+ⓑ)</b></div>
+                                          <li>ⓐ종교단체 : (근로소득금액－①－②－③) × 10%</li>
+                                          <li>ⓑ그 외 :Min[(근로소득금액－①－②－③) × 20%, 종교단체 외 기부금]</br>
+                                      </ul></td>
+                                      
+                                  </tr>
+                                  <tr>
+                                      <td>⑤지정기부금<br>(종교단체기부금 없는 경우)<br>(소법 제34조 제3항 제1호)</td>
+                                      <td>(근로소득금액－①－②－③) × 30%</br>
+                                      </ul></td>
+                                      
+                                  </tr>
+                                  <tr>
+                                      <td colspan="3">
+                                          <ul class="list-circle" style="text-align: left;">
+                                              <div>[공제신청 제출서류]</div>
+                                              <li>기부처에서 발행한 기부금영수증</li>  
+                                              <li>기부내용기재한 기부금명세서</li>
+                                          </ul>
+                                      </td>
+                                  </tr>
+                                  
+                              </tbody>
+                          </table>
+  
+                          <ul class="jusuk">
+                              <li>지방자치단체의 장의 허가를 받기 이전에 설립중인 교회 등에 지급한 지정기부금은 허가를 받은 연도의 기부금영수증 발급대상에 해당하는 것임</li>
+                              <li>특별재난지역 선포일 전 및 특별재난지역 외의 지역에 코로나 19 관련 기부금을 지출한 경우에도 법정기부금에 해당함</li>
+                              <li>개인사찰이 종단에 사찰등록을 하고 법인으로 보는 단체로 승인받아 고유번호를 부여받은 후 탈종을 한 경우 지정기부금 단체에 해당하지 않음</li>
+                          </ul>
+                      </div>
+                  </section>
+  
+                  <a name="rent-tax-credit"></a>
+                  <section>
+                      <div class="blacktitle">                    
+                          <p>5. 월세액 세액공제</p>
+                      </div>
+  
+                      <p class="explain"> 무주택세대의 세대주로서 총급여액이 7천만원 이하인 근로소득이 있는 거주자가 국민주택규모의 주택 또는 기준시가 3억원 이하 주택을 임차하기 위하여 지급하는 월세액이 있는 경우, 당해연도 지급한 월세액(750만원 한도)의 10%(12%)를 세액공제합니다.</p>
+                      
+                      <ul class="jusuk-box"> 
+                          <p>[월세액 공제요건]</p>
+                          <li>과세연도 말 현재 무주택 세대의 세대주(세대주가 월세액 세액공제, 주택마련저축, 주택임차차입금 원리금상환액 및 장기주택저당차입금 이자상환액 공제를 받지 아니한 경우에는 세대의 구성원)일 것</li>
+                          <li>총급여액 7천만원 이하의 근로소득이 있는 거주자일 것</li>
+                          <li>국민주택규모의 주택 또는 기준시가가 3억원 이하인 주택(주거용 오피스텔, 고시원 포함)을 임차하고 월세(사글세포함) 지급액이 있을 것</li>
+                          <li>임대차계약증서의 주소지와 주민등록표 등본의 주소지(외국인의 경우에는 「출입국관리법」 제32조제4호에 따른 국내 체류지 또는 「재외동포의 출입국과 법적 지위에 관한 법률」 제6조에 따라 신고한 국내거소)가 일치하여야 함</li>
+                          <p>[참고사항]</p>
+                          <li>2017년부터 근로자의 기본공제대상자(배우자 등)가 계약을 체결한 경우에도 공제 가능</li>
+                          <li>2014년부터 확정일자를 받지 않더라도 세액공제 가능</li>
+  
+                      </ul>
+  
+                      <table class="house-credit">
+                          <thead>
+                              <tr>
+                                  <th>총급여 조건<br>(종합소득금액 조건)</th>
+                                  <th>공제율</th>
+                                  <th>한도액</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>총급여액 5,500만원 초과 7천만원 이하자<br>(종합소득금액 6천만원 초과자 제외)</td>
+                                  <td>10%</td>
+                                  <td>750만원</td>
+                              </tr>
+                              <tr>
+                                  <td>총급여액 5,500만원 이하자<br>(종합소득금액 4,500만원 초과자 제외)</td>
+                                  
+                                  <td>12%</td>
+                                  <td>750만원</td>
+                              </tr>
+                               <tr>
+                                   <td colspan="3">
+                                       <ul class="list-disc" style="text-align: left;">
+                                           <p><b>[공제증명 제출서류]</b></p>
+                                           <li>근로자(소득공제신청자) 주민등록등본</li>
+                                           <li>임대차계약서 사본</li>
+                                           <li>월세액 계좌이체 영수증 또는 통장거래내역 등  임대인에게 월세액을 지급증빙서류</li>
+                                       </ul>
+                                   </td>
+                               </tr>
+                          </tbody>
+                      </table>
+                  </section>
+  
+                </article>
+
                 <div class="last-part"></div>
             </div>
             <footer class="footer">
