@@ -71,6 +71,7 @@ table tr td:nth-child(2) {
 }
 .tax-structure td:nth-child(3) {
   font-size: 0.8em;
+  text-align: left;
   /* width: 200px; */
 }
 

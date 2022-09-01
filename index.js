@@ -1,5 +1,8 @@
 "use strict";
 
+//body
+const myView = document.querySelector("html");
+
 //menu button
 const menulist = document.getElementById("menulist");
 const popupmenu = document.querySelector(".popupmenu");
@@ -9,10 +12,6 @@ const submenuContainer = document.querySelector(".submenu-container");
 const submenu = document.querySelector(".submenu");
 
 const bigWindow = 800;
-
-//submenu open
-const itemOpen1 = document.querySelector("#item-open1");
-const item1 = document.querySelector("#item1");
 
 const itemOpens = new Array();
 for (let i = 0; i < 5; i++) {
@@ -29,10 +28,8 @@ let menuPosX = 0;
 let menuHeight = 300;
 let contentHeight = content.getBoundingClientRect().height;
 const links = submenu.querySelectorAll("li a");
-const linklists = new Array();
-for (let i = 0; i < links.length; i++) {
-  linklists.push(links[i]);
-}
+const linklists = [];
+links.forEach((item) => linklists.push(item));
 
 //팝업메뉴 열고 닫기
 function menuOpen(open) {
@@ -40,10 +37,20 @@ function menuOpen(open) {
     submenuContainer.style.display = "block";
     submenuContainer.style.left = menuPosX + "px";
     submenu.style.height = menuHeight.toString() + "px";
+    if (/Mobi|Android/i.test(navigator.userAgent)) {
+      myView.style = "overflow: hidden;";
+    } else {
+      myView.style = "overflow: hidden; width: calc(100% - 18px);";
+    }
     isPopup = true;
   } else {
     submenuContainer.removeAttribute("style"); //.display = "none";
     //.submenuContainer.style.left = "0";
+    if (/Mobi|Android/i.test(navigator.userAgent)) {
+      myView.style = "overflow: auto;";
+    } else {
+      myView.style = "overflow: scroll; width: 100%;";
+    }
     isPopup = false;
   }
 }
@@ -57,8 +64,10 @@ submenuContainer.addEventListener(
       itemOpens[index].classList.toggle("rotate180");
       items[index].classList.toggle("show");
     } else if (isPopup) {
-      console.log(linklists.indexOf(e.target), e.target);
-      if (linklists.indexOf(e.target) >= 0) {
+      // console.log(linklists.find(e.target), e.target);
+      // indexOf 해당요소가 없으면 -1을 반환한다
+      //includes 해당요소가 있으면 true, 검은배경클릭시(submenuContainer 자기자신)
+      if (linklists.includes(e.target) || e.target == submenuContainer) {
         menuOpen(false);
       }
     }
@@ -95,6 +104,10 @@ submenuContainer.onmouseover = function () {
 
 //if mouse is outside of popup, close popup menu
 submenu.onmouseout = function () {
+  //휴대폰이면 종료
+  if (/Mobi|Android/i.test(navigator.userAgent)) {
+    return;
+  }
   if (window.innerWidth < bigWindow) {
     if (isPopup) {
       menuOpen(false);

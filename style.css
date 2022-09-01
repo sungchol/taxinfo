@@ -29,6 +29,7 @@ body {
   background-color: #eee;
   color: #222;
   /* word-break: keep-all; */
+  overflow: scroll;
 }
 
 li {
@@ -119,6 +120,16 @@ section {
   display: none;
 }
 
+.submenu-container:before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+}
 @keyframes mymove {
   from {
     left: -3em;
@@ -512,7 +523,9 @@ div.blacktitle p {
     display: block !important;
     width: 210px;
   }
-
+  .submenu-container:before {
+    display: none;
+  }
   .submenu-container .submenu {
     line-height: 1.8em;
     box-shadow: none;
